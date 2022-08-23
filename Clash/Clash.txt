@@ -1,65 +1,80 @@
 [custom]
-custom_proxy_group=🪜 𝙿𝚛𝚘𝚡𝚢`select`[]🇭🇰 𝙷𝙺`[]🇨🇳 𝚃𝚆`[]🇸🇬 𝚂𝙶`[]🇯🇵 𝙹𝙿`[]🇺🇸 𝚄𝚂`[]🇺🇳 𝙾𝚝𝚑𝚎𝚛`[]☝️ 𝚂𝚎𝚕𝚎𝚌𝚝`[]DIRECT
-custom_proxy_group=☝️ 𝚂𝚎𝚕𝚎𝚌𝚝`select`.*
-custom_proxy_group=🇭🇰 𝙷𝙺`select`(?=.*(港))^((?!(游戏)).)*$
-custom_proxy_group=🇯🇵 𝙹𝙿`select`(日本|川日|东京|大阪|泉日|埼玉|沪日|深日|[^-]日|JP|Japan)
-custom_proxy_group=🇺🇸 𝚄𝚂`select`(美|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|US|United States)
-custom_proxy_group=🇸🇬 𝚂𝙶`select`(新加坡|坡|狮城|SG|Singapore)
-custom_proxy_group=🇨🇳 𝚃𝚆`select`(台|新北|彰化|TW|Taiwan)
-custom_proxy_group=🇺🇳 𝙾𝚝𝚑𝚎𝚛`select`^((?!美国|台湾|香港|日本|新加坡|游戏).)*$
-custom_proxy_group=🎮 𝙶𝚊𝚖𝚎`select`(游戏)
-custom_proxy_group=🎬 𝙳𝚒𝚜𝚗𝚎𝚢+`select`[]🇸🇬 𝚂𝙶`[]🇭🇰 𝙷𝙺`[]🇨🇳 𝚃𝚆`[]🇯🇵 𝙹𝙿`[]🇺🇸 𝚄𝚂``[]☝️ 𝚂𝚎𝚕𝚎𝚌𝚝`[]🪜 𝙿𝚛𝚘𝚡𝚢`[]DIRECT
-custom_proxy_group=🎬 𝙽𝚎𝚝𝚏𝚕𝚒𝚡`select`[]🇸🇬 𝚂𝙶`[]🇭🇰 𝙷𝙺`[]🇨🇳 𝚃𝚆`[]🇯🇵 𝙹𝙿`[]🇺🇸 𝚄𝚂``[]☝️ 𝚂𝚎𝚕𝚎𝚌𝚝`[]🪜 𝙿𝚛𝚘𝚡𝚢`[]DIRECT
-custom_proxy_group=📺 𝚈𝚘𝚞𝚝𝚞𝚋𝚎`select`[]🪜 𝙿𝚛𝚘𝚡𝚢`[]🇸🇬 𝚂𝙶`[]🇭🇰 𝙷𝙺`[]🇨🇳 𝚃𝚆`[]🇯🇵 𝙹𝙿`[]🇺🇸 𝚄𝚂``[]☝️ 𝚂𝚎𝚕𝚎𝚌𝚝`[]DIRECT
-custom_proxy_group=🎵 𝚂𝚙𝚘𝚝𝚒𝚏𝚢`select`[]🪜 𝙿𝚛𝚘𝚡𝚢`[]🇸🇬 𝚂𝙶`[]🇭🇰 𝙷𝙺`[]🇨🇳 𝚃𝚆`[]🇯🇵 𝙹𝙿`[]🇺🇸 𝚄𝚂``[]☝️ 𝚂𝚎𝚕𝚎𝚌𝚝`[]DIRECT
-custom_proxy_group=✈️ 𝚃𝚎𝚕𝚎𝚐𝚛𝚊𝚖`select`[]🎮 𝙶𝚊𝚖𝚎`[]🪜 𝙿𝚛𝚘𝚡𝚢`[]🇸🇬 𝚂𝙶`[]🇭🇰 𝙷𝙺`[]🇨🇳 𝚃𝚆`[]🇯🇵 𝙹𝙿`[]🇺🇸 𝚄𝚂``[]☝️ 𝚂𝚎𝚕𝚎𝚌𝚝`[]DIRECT
-custom_proxy_group=💳 𝙿𝚊𝚢𝙿𝚊𝚕`select`[]🇺🇸 𝚄𝚂
-custom_proxy_group=🍻 𝙱𝚒𝚕𝚒𝙱𝚒𝚕𝚒`select`[]DIRECT`[]🇨🇳 𝚃𝚆`[]🇭🇰 𝙷𝙺
-custom_proxy_group=🌍 𝙿𝚛𝚘𝚡𝚢𝙼𝚎𝚍𝚒𝚊`select`[]🪜 𝙿𝚛𝚘𝚡𝚢`[]🇭🇰 𝙷𝙺`[]🇨🇳 𝚃𝚆`[]🇸🇬 𝚂𝙶`[]🇯🇵 𝙹𝙿`[]🇺🇸 𝚄𝚂``[]☝️ 𝚂𝚎𝚕𝚎𝚌𝚝`[]DIRECT
-custom_proxy_group=𝙶𝚘𝚘𝚐𝚕𝚎`select`[]DIRECT`[]🪜 𝙿𝚛𝚘𝚡𝚢`[]🇺🇸 𝚄𝚂`[]🇭🇰 𝙷𝙺`[]🇨🇳 𝚃𝚆`[]🇸🇬 𝚂𝙶`[]🇯🇵 𝙹𝙿``[]☝️ 𝚂𝚎𝚕𝚎𝚌𝚝
-custom_proxy_group=𝙼𝚒𝚌𝚛𝚘𝚜𝚘𝚏𝚝`select`[]DIRECT`[]🪜 𝙿𝚛𝚘𝚡𝚢`[]🇺🇸 𝚄𝚂`[]🇭🇰 𝙷𝙺`[]🇨🇳 𝚃𝚆`[]🇸🇬 𝚂𝙶`[]🇯🇵 𝙹𝙿``[]☝️ 𝚂𝚎𝚕𝚎𝚌𝚝
-custom_proxy_group=𝙼𝚒𝚌𝚛𝚘𝚜𝚘𝚏𝚝`select`[]DIRECT`[]🪜 𝙿𝚛𝚘𝚡𝚢`[]🇺🇸 𝚄𝚂`[]🇭🇰 𝙷𝙺`[]🇨🇳 𝚃𝚆`[]🇸🇬 𝚂𝙶`[]🇯🇵 𝙹𝙿``[]☝️ 𝚂𝚎𝚕𝚎𝚌𝚝
-custom_proxy_group=𝙰𝚙𝚙𝚕𝚎`select`[]DIRECT`[]🪜 𝙿𝚛𝚘𝚡𝚢`[]🇺🇸 𝚄𝚂`[]🇭🇰 𝙷𝙺`[]🇨🇳 𝚃𝚆`[]🇸🇬 𝚂𝙶`[]🇯🇵 𝙹𝙿``[]☝️ 𝚂𝚎𝚕𝚎𝚌𝚝
-custom_proxy_group=🛑 𝙰𝚍𝙶𝚞𝚊𝚛𝚍`select`[]REJECT`[]DIRECT
+# Update-2022.8.23
+custom_proxy_group=Proxy`select`[]🇭🇰 HK`[]🇹🇼 TW`[]🇸🇬 SG`[]🇯🇵 JP`[]🇺🇸 US`[]🇺🇳 Others`[]DIRECT
+
+custom_proxy_group=🎬 Disney+`select`[]🇸🇬 SG`[]🇭🇰 HK`[]🇹🇼 TW`[]🇯🇵 JP`[]🇺🇸 US``[]Proxy`[]DIRECT
+custom_proxy_group=🎬 Netflix`select`[]🇸🇬 SG`[]🇭🇰 HK`[]🇹🇼 TW`[]🇯🇵 JP`[]🇺🇸 US``[]Proxy`[]DIRECT
+custom_proxy_group=📺 YouTube`select`[]Proxy`[]🇸🇬 SG`[]🇭🇰 HK`[]🇹🇼 TW`[]🇯🇵 JP`[]🇺🇸 US`[]DIRECT
+custom_proxy_group=📺 Emby`select`[]Proxy`[]🇸🇬 SG`[]🇭🇰 HK`[]🇹🇼 TW`[]🇯🇵 JP`[]🇺🇸 US`[]DIRECT
+custom_proxy_group=🎵 Spotify`select`[]Proxy`[]🇸🇬 SG`[]🇭🇰 HK`[]🇹🇼 TW`[]🇯🇵 JP`[]🇺🇸 US`[]DIRECT
+custom_proxy_group=✈️ Telegram`select`[]🎮 Game`[]Proxy`[]🇸🇬 SG`[]🇭🇰 HK`[]🇹🇼 TW`[]🇯🇵 JP`[]🇺🇸 US`[]DIRECT
+custom_proxy_group=🍻 BiliBili`select`[]DIRECT`[]🇹🇼 TW`[]🇭🇰 HK
+custom_proxy_group=🌍 ProxyMedia`select`[]Proxy`[]🇭🇰 HK`[]🇹🇼 TW`[]🇸🇬 SG`[]🇯🇵 JP`[]🇺🇸 US`[]DIRECT
+
+custom_proxy_group=💳 PayPal`select`[]🇺🇸 US
+custom_proxy_group=Google`select`[]DIRECT`[]Proxy`[]🇺🇸 US`[]🇭🇰 HK`[]🇹🇼 TW`[]🇸🇬 SG`[]🇯🇵 JP
+custom_proxy_group=Microsoft`select`[]DIRECT`[]Proxy`[]🇺🇸 US`[]🇭🇰 HK`[]🇹🇼 TW`[]🇸🇬 SG`[]🇯🇵 JP
+custom_proxy_group=Microsoft`select`[]DIRECT`[]Proxy`[]🇺🇸 US`[]🇭🇰 HK`[]🇹🇼 TW`[]🇸🇬 SG`[]🇯🇵 JP
+custom_proxy_group=Apple`select`[]DIRECT`[]Proxy`[]🇺🇸 US`[]🇭🇰 HK`[]🇹🇼 TW`[]🇸🇬 SG`[]🇯🇵 JP
+custom_proxy_group=🛑 AdGuard`select`[]REJECT`[]DIRECT
+
+custom_proxy_group=🇭🇰 HK`select`(?=.*(港))^((?!(游戏)).)*$
+custom_proxy_group=🇯🇵 JP`select`(日本|川日|东京|大阪|泉日|埼玉|沪日|深日|[^-]日|JP|Japan)
+custom_proxy_group=🇺🇸 US`select`(美|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|US|United States)
+custom_proxy_group=🇸🇬 SG`select`(新加坡|坡|狮城|SG|Singapore)
+custom_proxy_group=🇹🇼 TW`select`(台|新北|彰化|TW|Taiwan)
+custom_proxy_group=🇺🇳 Others`select`^((?!美国|台湾|香港|日本|新加坡|游戏).)*$
+custom_proxy_group=🎮 Game`select`(游戏)
 
 ;本地/局域网地址
 ruleset=DIRECT,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Lan/Lan.list
+;后续规则修正
+ruleset=DIRECT,https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/Unbreak.list
+; 广告屏蔽
+ruleset=REJECT,https://raw.githubusercontent.com/NobyDa/Script/master/Surge/AdRule.list
+domainset=REJECT,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/AdGuard/AdvertisingLite/AdvertisingLite.txt
+;隐私保护
+ruleset=REJECT,https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/Guard/Privacy.list
+;运营商劫持或恶意网站
+ruleset=REJECT,https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/Guard/Hijacking.list
+
 ;谷歌服务
-ruleset=🇭🇰 𝙷𝙺,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Google/Google.list
+ruleset=🇭🇰 HK,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Google/Google.list
 ;微软服务
 ruleset=DIRECT,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Microsoft/Microsoft.list
 ;苹果服务
-ruleset=𝙰𝚙𝚙𝚕𝚎,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Apple/Apple.list
+ruleset=Apple,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Apple/Apple.list
 ;流媒体
-ruleset=📺 𝚈𝚘𝚞𝚝𝚞𝚋𝚎,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/YouTube/YouTube.list
-ruleset=🎬 𝙽𝚎𝚝𝚏𝚕𝚒𝚡,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Netflix/Netflix.list
-ruleset=🎬 𝙳𝚒𝚜𝚗𝚎𝚢+,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/release/rule/Surge/Disney/Disney.list
-ruleset=🌍 𝙿𝚛𝚘𝚡𝚢𝙼𝚎𝚍𝚒𝚊,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyMedia.list
-ruleset=🍻 𝙱𝚒𝚕𝚒𝙱𝚒𝚕𝚒,https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/StreamingMedia/StreamingSE.list
+ruleset=📺 YouTube,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/📺 YouTube/📺 YouTube.list
+ruleset=🎬 Netflix,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/🎬 Netflix/🎬 Netflix.list
+ruleset=🎬 Disney+,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/release/rule/Surge/Disney/Disney.list
+ruleset=📺 Emby,raw.githubusercontent.com/Godrock/Profiles/main/Surge/Emby.list
+ruleset=🌍 ProxyMedia,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyMedia.list
+ruleset=🍻 BiliBili,https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/StreamingMedia/StreamingSE.list
 ruleset=DIRECT,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/ChinaMedia/ChinaMedia.list
-ruleset=🎵 𝚂𝚙𝚘𝚝𝚒𝚏𝚢,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/release/rule/Surge/Spotify/Spotify.list
+ruleset=🎵 Spotify,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/release/rule/Surge/Spotify/Spotify.list
 ;社交平台
-ruleset=✈️ 𝚃𝚎𝚕𝚎𝚐𝚛𝚊𝚖,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Telegram/Telegram.list
-ruleset=🇭🇰 𝙷𝙺,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Mail/Mail.list
+ruleset=✈️ Telegram,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Telegram/Telegram.list
+ruleset=🇭🇰 HK,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Mail/Mail.list
 ruleset=DIRECT,https://raw.githubusercontent.com/NobyDa/Script/master/Surge/WeChat.list
 ;PayPal
-ruleset=💳 𝙿𝚊𝚢𝙿𝚊𝚕,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/PayPal/PayPal.list
+ruleset=💳 PayPal,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/PayPal/PayPal.list
 ;游戏平台
-ruleset=🎮 𝙶𝚊𝚖𝚎,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Epic/Epic.list
-ruleset=🎮 𝙶𝚊𝚖𝚎,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Sony/Sony.list
-ruleset=🎮 𝙶𝚊𝚖𝚎,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Steam/Steam.list
-ruleset=🎮 𝙶𝚊𝚖𝚎,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Nintendo/Nintendo.list
+ruleset=🎮 Game,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Epic/Epic.list
+ruleset=🎮 Game,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Sony/Sony.list
+ruleset=🎮 Game,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Steam/Steam.list
+ruleset=🎮 Game,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Nintendo/Nintendo.list
 ;Proxy
-ruleset=🪜 𝙿𝚛𝚘𝚡𝚢,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Proxy/Proxy.list
-domainset=🪜 𝙿𝚛𝚘𝚡𝚢,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Proxy/Proxy_Domain.list
+ruleset=Proxy,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Global/Global.list,Proxy
+ruleset=Proxy,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Proxy/Proxy.list
+domainset=Proxy,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Proxy/Proxy_Domain.list
 ;China
 ruleset=DIRECT,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/China/China.list
 ruleset=DIRECT,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/ChinaIPs/ChinaIPs.list
 ruleset=DIRECT,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Download/Download.list
-;广告屏蔽
-ruleset=🛑 𝙰𝚍𝙶𝚞𝚊𝚛𝚍,https://raw.githubusercontent.com/NobyDa/Script/master/Surge/AdRule.list
+;GeoIP China
 ruleset=DIRECT,[]GEOIP,CN
-ruleset=🪜 𝙿𝚛𝚘𝚡𝚢,[]FINAL
+ruleset=Proxy,[]FINAL
 
 
 enable_rule_generator=true
