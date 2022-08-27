@@ -1,5 +1,5 @@
 [custom]
-# Update-2022.8.23
+# Update-2022.8.27
 custom_proxy_group=Proxy`select`[]🇭🇰 HK`[]🇹🇼 TW`[]🇸🇬 SG`[]🇯🇵 JP`[]🇺🇸 US`[]🇺🇳 Others`[]DIRECT
 
 custom_proxy_group=🎬 Disney+`select`[]🇸🇬 SG`[]🇭🇰 HK`[]🇹🇼 TW`[]🇯🇵 JP`[]🇺🇸 US``[]Proxy`[]DIRECT
@@ -18,13 +18,13 @@ custom_proxy_group=Microsoft`select`[]DIRECT`[]Proxy`[]🇺🇸 US`[]🇭🇰 HK
 custom_proxy_group=Apple`select`[]DIRECT`[]Proxy`[]🇺🇸 US`[]🇭🇰 HK`[]🇹🇼 TW`[]🇸🇬 SG`[]🇯🇵 JP
 custom_proxy_group=🛑 AdGuard`select`[]REJECT`[]DIRECT
 
-custom_proxy_group=🇭🇰 HK`select`(?=.*(港))^((?!(游戏)).)*$
-custom_proxy_group=🇯🇵 JP`select`(日本|川日|东京|大阪|泉日|埼玉|沪日|深日|[^-]日|JP|Japan)
-custom_proxy_group=🇺🇸 US`select`(美|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|US|United States)
-custom_proxy_group=🇸🇬 SG`select`(新加坡|坡|狮城|SG|Singapore)
-custom_proxy_group=🇹🇼 TW`select`(台|新北|彰化|TW|Taiwan)
 custom_proxy_group=🇺🇳 Others`select`^((?!美国|台湾|香港|日本|新加坡|游戏).)*$
-custom_proxy_group=🎮 Game`select`(游戏)
+custom_proxy_group=🇭🇰 HK`url-test`(?=.*(港))^((?!(游戏)).)*$`http://www.gstatic.com/generate_204`600
+custom_proxy_group=🇯🇵 JP`url-test`(日本|川日|东京|大阪|泉日|埼玉|沪日|深日|[^-]日|JP|Japan)`http://www.gstatic.com/generate_204`600
+custom_proxy_group=🇺🇸 US`url-test`(美|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|US|United States)`http://www.gstatic.com/generate_204`600
+custom_proxy_group=🇸🇬 SG`url-test`(新加坡|坡|狮城|SG|Singapore)`http://www.gstatic.com/generate_204`600
+custom_proxy_group=🇹🇼 TW`url-test`(台|新北|彰化|TW|Taiwan)`http://www.gstatic.com/generate_204`600
+custom_proxy_group=🎮 Game`url-test`(游戏)`http://www.gstatic.com/generate_204`600
 
 ;本地/局域网地址
 ruleset=DIRECT,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Lan/Lan.list
