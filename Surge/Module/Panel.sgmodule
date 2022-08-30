@@ -1,0 +1,55 @@
+#!name=Panel
+#!desc=信息面板
+
+[Panel]
+#Surge Pro标题,可显示启动时间,点击刷新为重载配置
+#SurgePro_ReloadProfile = script-name=SurgePro_ReloadProfile, update-interval=1
+
+#验证Warp,显示IP和流量的面板
+WarpPanel = script-name=WarpPanel,update-interval=1
+
+#详细的显示你当前的网络信息
+NetInfoPanel=title="",content="",style=info,script-name=net-info-panel.js,update-interval=1
+
+# > 流媒体解锁检测
+stream-all = script-name=stream-all,update-interval=3600
+
+# 机场信息
+#Sub_info = script-name=Sub_info,update-interval=3600
+
+Sub_info1 = script-name=Sub_info1,update-interval=3600
+
+Sub_info2 = script-name=Sub_info2,update-interval=3600
+
+
+#流量统计
+TrafficStatistics = script-name=TrafficStatistics, update-interval=1
+
+[Script]
+#附带重载配置,Surge Pro标题,可显示启动时间,点击刷新为重载配置
+#SurgePro_ReloadProfile = type=generic, timeout=10, script-path = https://raw.githubusercontent.com/fishingworld/something/main/PanelScripts/surgepro_reloadprofile.js, argument=icon=crown.fill&color=#f6c970
+
+#验证Warp,显示IP和流量的面板
+WarpPanel = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/I-am-R-E/Functional-Store-Hub/Master/WarpPanel/Script/WarpPanel.js
+
+WarpPanel = type=http-request,pattern=^https?:\/\/(api\.cloudflareclient\.com|zero\-trust\-client\.cloudflareclient\.com)\/\w+\/\w+\/[\w\-\.]+$,requires-body=0,max-size=0,script-path=https://raw.githubusercontent.com/I-am-R-E/Functional-Store-Hub/Master/WarpPanel/Script/WarpPanel.js,script-update-interval=0
+
+#详细的显示你当前的网络信息
+net-info-panel.js=script-path=https://raw.githubusercontent.com/Rabbit-Spec/Surge/Master/Module/Panel/Network-Info/Moore/Network-Info.js,type=generic,timeout=30
+
+# > 流媒体解锁检测
+stream-all = type=generic,timeout=30,script-path=https://raw.githubusercontent.com/Godrock/Profiles/main/JavaScript/Surge/Stream-all.js,argument=title=解锁检测&icon=display&color=#ff0000
+
+# 机场信息
+#Sub_info = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/mieqq/mieqq/master/sub_info_panel.js,script-update-interval=0,argument=url=[URL encode 后的机场节点链接]&reset_day=到期时间&title=机场名称&icon=airplane.circle.fill&color=#5A9AF9
+
+#流量统计 点击以切换网络界面
+TrafficStatistics = type=generic,timeout=10,script-path= https://raw.githubusercontent.com/fishingworld/something/main/PanelScripts/trafficstatistics.js, argument=icon=antenna.radiowaves.left.and.right.circle.fill&color=#8AB8DD
+
+[Host]
+#详细的显示你当前的网络信息
+ip-api.com = 208.95.112.1
+
+[MITM]
+#验证Warp,显示IP和流量的面板
+hostname = %APPEND% api.cloudflareclient.com,zero-trust-client.cloudflareclient.com
