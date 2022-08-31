@@ -1,5 +1,6 @@
+# Update-2022.8.31
+
 [custom]
-# Update-2022.8.27
 custom_proxy_group=Proxy`select`[]🇭🇰 HK`[]🇹🇼 TW`[]🇸🇬 SG`[]🇯🇵 JP`[]🇺🇸 US`[]🇺🇳 Others`[]DIRECT
 
 custom_proxy_group=🎬 Disney+`select`[]🇸🇬 SG`[]🇭🇰 HK`[]🇹🇼 TW`[]🇯🇵 JP`[]🇺🇸 US``[]Proxy`[]DIRECT
@@ -48,7 +49,7 @@ ruleset=Apple,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/mas
 ruleset=📺 YouTube,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/📺 YouTube/📺 YouTube.list
 ruleset=🎬 Netflix,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/🎬 Netflix/🎬 Netflix.list
 ruleset=🎬 Disney+,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/release/rule/Surge/Disney/Disney.list
-ruleset=📺 Emby,raw.githubusercontent.com/Godrock/Profiles/main/Surge/Emby.list
+ruleset=📺 Emby,https://raw.githubusercontent.com/w164955/Config/main/Rule/Emby.list.list
 ruleset=🌍 ProxyMedia,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyMedia.list
 ruleset=🍻 BiliBili,https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/StreamingMedia/StreamingSE.list
 ruleset=DIRECT,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/ChinaMedia/ChinaMedia.list
