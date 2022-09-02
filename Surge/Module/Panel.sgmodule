@@ -38,7 +38,7 @@ Sub_info1 = type=generic,timeout=10,script-path=https://raw.githubusercontent.co
 Sub_info2 = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/mieqq/mieqq/master/sub_info_panel.js,script-update-interval=0,argument=url=https%3A%2F%2Fapi.prprcloud.life%2Fss%2F13851%2Ff4IpcsMCO3%2F&reset_day=0&title=prprCloud&icon=externaldrive.fill.badge.icloud&color=#007aff
 
 #流量统计 点击以切换网络界面
-TrafficStatistics = type=generic,timeout=10,script-path= https://raw.githubusercontent.com/fishingworld/something/main/PanelScripts/trafficstatistics.js, argument=title=cellular&icon=bonjour&color=#007aff
+TrafficStatistics = type=generic,timeout=10,script-path= https://raw.githubusercontent.com/fishingworld/something/main/PanelScripts/trafficstatistics.js, argument=icon=bonjour&color=#007aff
 
 [Host]
 #详细的显示你当前的网络信息
