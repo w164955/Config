@@ -1,13 +1,10 @@
 #!name=Panel
-#!desc=Update-2022.8.31
+#!desc=Update-2022.9.3
 #!system=ios
 
 [Panel]
 #Surge Pro标题,可显示启动时间,点击刷新为重载配置
 #SurgePro_ReloadProfile = script-name=SurgePro_ReloadProfile, update-interval=1
-
-# WARP Panel
-☁️ WARP Panel = title="☁️ 𝙒𝘼𝙍𝙋 𝙄𝙣𝙛𝙤", icon="lock.icloud.fill", script-name=☁️ WARP Panel
 
 #详细的显示你当前的网络信息
 NetInfoPanel=title="",content="",style=info,script-name=net-info-panel.js,update-interval=1
@@ -28,33 +25,21 @@ TrafficStatistics = script-name=TrafficStatistics, update-interval=1
 #附带重载配置,Surge Pro标题,可显示启动时间,点击刷新为重载配置
 #SurgePro_ReloadProfile = type=generic, timeout=10, script-path = https://raw.githubusercontent.com/fishingworld/something/main/PanelScripts/surgepro_reloadprofile.js, argument=icon=crown.fill&color=#f6c970
 
-# WARP Panel
-#!PROFILE-VERSION-REQUIRED 10 ☁️ WARP Panel = type=generic, timeout=10, script-path=https://raw.githubusercontent.com/VirgilClyne/Cloudflare/main/js/Cloudflare.1.1.1.1.panel.js
-
-# WARP Personal
-☁️ WARP Personal Request = type=http-request,pattern=^https?:\/\/(api|zero-trust-client)\.cloudflareclient\.com\/(.*)\/reg\/[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[089ab][0-9a-f]{3}-[0-9a-f]{12}$, requires-body=1, script-path=https://raw.githubusercontent.com/VirgilClyne/Cloudflare/main/js/Cloudflare.1.1.1.1.request.js
-☁️ WARP Personal Response = type=http-response,pattern=^https?:\/\/(api|zero-trust-client)\.cloudflareclient\.com\/(.*)\/reg\/[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[089ab][0-9a-f]{3}-[0-9a-f]{12}$, requires-body=1, script-path=https://raw.githubusercontent.com/VirgilClyne/Cloudflare/main/js/Cloudflare.1.1.1.1.response.js
-
-# Cloudflare for Teams
-☁️ WARP Teams Request = type=http-request,pattern=^https?:\/\/(api|zero-trust-client)\.cloudflareclient\.com\/(.*)\/reg\/t\.[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[089ab][0-9a-f]{3}-[0-9a-f]{12}$, requires-body=1, script-path=https://raw.githubusercontent.com/VirgilClyne/Cloudflare/main/js/Cloudflare.1.1.1.1.request.js
-☁️ WARP Teams Response = type=http-response,pattern=^https?:\/\/(api|zero-trust-client)\.cloudflareclient\.com\/(.*)\/reg\/t\.[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[089ab][0-9a-f]{3}-[0-9a-f]{12}$, requires-body=1, script-path=https://raw.githubusercontent.com/VirgilClyne/Cloudflare/main/js/Cloudflare.1.1.1.1.response.js
-
 #详细的显示你当前的网络信息
 net-info-panel.js=script-path=https://raw.githubusercontent.com/Rabbit-Spec/Surge/Master/Module/Panel/Network-Info/Moore/Network-Info.js,type=generic,timeout=30
 
 # > 流媒体解锁检测
-stream-all = type=generic,timeout=30,script-path=https://raw.githubusercontent.com/Godrock/Profiles/main/JavaScript/Surge/Stream-all.js,argument=title=解锁检测&icon=display&color=#ff0000
+stream-all = type=generic,timeout=30,script-path=https://raw.githubusercontent.com/Godrock/Profiles/main/JavaScript/Surge/Stream-all.js,argument=title=UnlockDetection&icon=display&color=#ff0000
 
 # 机场信息
-#Sub_info = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/mieqq/mieqq/master/sub_info_panel.js,script-update-interval=0,argument=url=[URL encode 后的机场节点链接]&reset_day=到期时间&title=机场名称&icon=airplane.circle.fill&color=#5A9AF9
+#Sub_info = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/mieqq/mieqq/master/sub_info_panel.js,script-update-interval=0,argument=url=[URL encode 后的机场节点链接]&reset_day=到期时间&title=机场名称&icon=externaldrive.fill.badge.icloud&color=#007aff
+
+Sub_info1 = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/mieqq/mieqq/master/sub_info_panel.js,script-update-interval=0,argument=url=https%3A%2F%2Fapi.flexconfig.net%2Flink%2FD9HYjo9abFhyAw2y%3Fsub%3D2%26extend%3D1&&reset_day=0&title=EXFLUX&icon=externaldrive.fill.badge.icloud&color=#007aff
+Sub_info2 = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/mieqq/mieqq/master/sub_info_panel.js,script-update-interval=0,argument=url=https%3A%2F%2Fapi.prprcloud.life%2Fss%2F13851%2Ff4IpcsMCO3%2F&reset_day=0&title=prprCloud&icon=externaldrive.fill.badge.icloud&color=#007aff
 
 #流量统计 点击以切换网络界面
-TrafficStatistics = type=generic,timeout=10,script-path= https://raw.githubusercontent.com/fishingworld/something/main/PanelScripts/trafficstatistics.js, argument=icon=antenna.radiowaves.left.and.right.circle.fill&color=#8AB8DD
+TrafficStatistics = type=generic,timeout=10,script-path= https://raw.githubusercontent.com/fishingworld/something/main/PanelScripts/trafficstatistics.js, argument=title=cellular&icon=bonjour&color=#007aff
 
 [Host]
 #详细的显示你当前的网络信息
 ip-api.com = 208.95.112.1
-
-[MITM]
-# WARP Panel
-hostname = %APPEND% api.cloudflareclient.com, zero-trust-client.cloudflareclient.com
