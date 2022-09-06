@@ -1,5 +1,5 @@
 #!name=Panel
-#!desc=Update-2022.9.3
+#!desc=Update-2022.9.6
 #!system=ios
 
 [Panel]
@@ -18,6 +18,9 @@ stream-all = script-name=stream-all,update-interval=3600
 Sub_info1 = script-name=Sub_info1,update-interval=3600
 Sub_info2 = script-name=Sub_info2,update-interval=3600
 
+#快速清除Surge的DNS缓存
+FlushDNS = script-name=FlushDNS,update-interval=600
+
 #流量统计
 TrafficStatistics = script-name=TrafficStatistics, update-interval=1
 
@@ -34,8 +37,8 @@ stream-all = type=generic,timeout=30,script-path=https://raw.githubusercontent.c
 # 机场信息
 #Sub_info = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/mieqq/mieqq/master/sub_info_panel.js,script-update-interval=0,argument=url=[URL encode 后的机场节点链接]&reset_day=到期时间&title=机场名称&icon=externaldrive.fill.badge.icloud&color=#007aff
 
-Sub_info1 = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/mieqq/mieqq/master/sub_info_panel.js,script-update-interval=0,argument=url=https%3A%2F%2Fapi.flexconfig.net%2Flink%2FD9HYjo9abFhyAw2y%3Fsub%3D2%26extend%3D1&&reset_day=0&title=EXFLUX&icon=externaldrive.fill.badge.icloud&color=#007aff
-Sub_info2 = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/mieqq/mieqq/master/sub_info_panel.js,script-update-interval=0,argument=url=https%3A%2F%2Fapi.prprcloud.life%2Fss%2F13851%2Ff4IpcsMCO3%2F&reset_day=0&title=prprCloud&icon=externaldrive.fill.badge.icloud&color=#007aff
+#快速清除Surge的DNS缓存
+FlushDNS = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/Rabbit-Spec/Surge/Master/Module/Panel/Flush-DNS/Moore/Flush-DNS.js,argument=title=DNS FLush&icon=cube&color=#afe59a&server=false
 
 #流量统计 点击以切换网络界面
 TrafficStatistics = type=generic,timeout=10,script-path= https://raw.githubusercontent.com/fishingworld/something/main/PanelScripts/trafficstatistics.js, argument=icon=bonjour&color=#007aff
