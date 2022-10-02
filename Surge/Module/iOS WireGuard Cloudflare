@@ -1,4 +1,6 @@
-# > iOS WireGuard Cloudflare
+#!name=iOS WireGuard Cloudflare
+#!desc=
+
 [WireGuard Cloudflare]
 private-key = +G/ThCGnRFT/UMGQMaoljsI+i0zWRCeZXnUappSQol8=
 self-ip = 172.16.0.2
