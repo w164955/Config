@@ -1,5 +1,5 @@
 # > NAME: Emby
-# > UPDATED: 2022-08-31
+# > UPDATED: 2022-10-02
 
 # > Odyssey+服务器
 DOMAIN,cf.odysseyplus.site
@@ -7,6 +7,12 @@ DOMAIN,sg.odysseyplus.site
 DOMAIN,jp.odysseyplus.site
 DOMAIN,us.odysseyplus.site
 DOMAIN,kr.odysseyplus.site
+
+# > 终点站服务器
+DOMAIN,pub1.emby.wtf
+DOMAIN,pub2.emby.wtf
+DOMAIN,pub3.emby.wtf
+DOMAIN,pub4.emby.wtf
 
 # > 卷毛鼠服务器
 DOMAIN,cf.jmsooo.com
@@ -16,6 +22,12 @@ DOMAIN,ha.jmsooo.com
 DOMAIN,cf.misakaf.org
 DOMAIN,4837.misakaf.org
 
+# > MisakaF-Porn服务器
+DOMAIN,porn.misakaf.org
+
+# > Misty服务器
+DOMAIN,aaa.ax
+
 # > BlueSeaMusic音乐服
 DOMAIN,jp.blueseamusicbox.best
 DOMAIN,blueseamusics.com
@@ -23,12 +35,8 @@ DOMAIN,blueseamusics.com
 # > BlueSea公益服
 DOMAIN,emby-pub1.blueseacdn.com
 
-# > Misty服务器
-DOMAIN,aaa.ax
-
-# > xiaomao服务器
-DOMAIN,emby.kim 
-DOMAIN,ha.emby.kim
+# > Froghub服务器
+DOMAIN,178.173.230.8
 
 # > MJJEMBY服务器
 DOMAIN,de.mjjemby.org
@@ -38,10 +46,17 @@ DOMAIN,kr01.mjjemby.org
 DOMAIN,kr02.mjjemby.org
 
 # > Orange服务器
-DOMAIN,emby.52.al
+DOMAIN,embytv.cf
 
 # > peach服务器
 DOMAIN,embymv.tk
 
+//none
 # > CC服务器
 DOMAIN,emby.jiasu.ga
+
+# > Singularity服务器
+DOMAIN,singularity.deja-vu.beauty
+
+# > DH二车服务器
+DOMAIN,51.79.222.233
