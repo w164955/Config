@@ -1,0 +1,6 @@
+#!name=熊掌记
+#!desc=笔记
+[MITM]
+hostname = %APPEND% buy.itunes.apple.com
+[Script]
+熊掌记 = requires-body=1,max-size=262144,script-path=https://raw.githubusercontent.com/w164955/Config/main/JavaScript/Surge/Bear.js,script-update-interval=0,type=http-response,pattern=^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt$
