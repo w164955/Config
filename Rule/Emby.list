@@ -3,10 +3,10 @@
 
 # > Odyssey+服务器
 DOMAIN,cf.odysseyplus.site
-DOMAIN,sg.odysseyplus.site
-DOMAIN,jp.odysseyplus.site
 DOMAIN,us.odysseyplus.site
 DOMAIN,kr.odysseyplus.site
+DOMAIN,jp.odysseyplus.site
+DOMAIN,jp2.odysseyplus.site
 
 # > 终点站服务器
 DOMAIN,pub1.emby.wtf
@@ -27,6 +27,7 @@ DOMAIN,porn.misakaf.org
 
 # > Misty服务器
 DOMAIN,aaa.ax
+DOMAIN,hk.aaa.ax
 
 # > BlueSeaMusic音乐服
 DOMAIN,jp.blueseamusicbox.best
@@ -53,7 +54,7 @@ DOMAIN,embymv.tk
 
 //none
 # > CC服务器
-DOMAIN,emby.jiasu.ga
+DOMAIN,cc.ccemby.tk
 
 # > Singularity服务器
 DOMAIN,singularity.deja-vu.beauty
