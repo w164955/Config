@@ -2,7 +2,7 @@
     "name":"Fileball-Icons",
     "description":"By w164955",
     "icons":[
-         {
+        {
             "name":"Odyssey",
             "url":"https://raw.githubusercontent.com/w164955/Config/main/Icon/Fileball/Odyssey.png"
         },
@@ -45,6 +45,6 @@
         {
             "name":"Google_Drive",
             "url":"https://raw.githubusercontent.com/w164955/Config/main/Icon/Fileball/Google_Drive.png"
-        },            
+        }          
     ]
 }
