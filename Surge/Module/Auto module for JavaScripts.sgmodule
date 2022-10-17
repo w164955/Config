@@ -1,5 +1,5 @@
-#!name=Auto module for JavaScripts
-#!desc=For those JavaScripts who should be disabled after evaluation successful.
+#!name=自动加入TF
+#!desc=
 
 [Script]
 Auto join TF = type=cron,cronexp=*/5 * * * * *,script-path=https://github.com/DecoAri/JavaScript/blob/main/Surge/Auto_join_TF.js?raw=true,wake-system=0,timeout=180
