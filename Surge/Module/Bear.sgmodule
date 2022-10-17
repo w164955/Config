@@ -1,5 +1,5 @@
 #!name=熊掌记
-#!desc=笔记
+#!desc=解锁
 [MITM]
 hostname = %APPEND% buy.itunes.apple.com
 [Script]
