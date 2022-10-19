@@ -3,32 +3,52 @@
     "description":"By  WAliensky",
     "icons":[
         {
-            "name":"Odyssey",
-            "url":"https://raw.githubusercontent.com/w164955/Config/main/Icon/Emby/Odyssey.png"
+            "name":"Odyssey1",
+            "url":"https://raw.githubusercontent.com/w164955/Config/main/Icon/Emby/Odyssey1.png"
         },
         {
-            "name":"Terminus",
-            "url":"https://raw.githubusercontent.com/w164955/Config/main/Icon/Emby/Terminus.png"
+            "name":"Odyssey2",
+            "url":"https://raw.githubusercontent.com/w164955/Config/main/Icon/Emby/Odyssey2.png"
         },
         {
-            "name":"Jmsooo",
-            "url":"https://raw.githubusercontent.com/w164955/Config/main/Icon/Emby/Jmsooo.png"
+            "name":"Terminus1",
+            "url":"https://raw.githubusercontent.com/w164955/Config/main/Icon/Emby/Terminus1.png"
+        },
+        {
+            "name":"Terminus2",
+            "url":"https://raw.githubusercontent.com/w164955/Config/main/Icon/Emby/Terminus2.png"
+        },
+        {
+            "name":"Jmsooo1",
+            "url":"https://raw.githubusercontent.com/w164955/Config/main/Icon/Emby/Jmsooo1.png"
+        },
+        {
+            "name":"Jmsooo2",
+            "url":"https://raw.githubusercontent.com/w164955/Config/main/Icon/Emby/Jmsooo2.png"
         },
         {
             "name":"MisakaF",
             "url":"https://raw.githubusercontent.com/w164955/Config/main/Icon/Emby/MisakaF.png"
         },
         {
-            "name":"BlueSea",
-            "url":"https://raw.githubusercontent.com/w164955/Config/main/Icon/Emby/BlueSea.png"
+            "name":"BlueSea1",
+            "url":"https://raw.githubusercontent.com/w164955/Config/main/Icon/Emby/BlueSea1.png"
+        },
+        {
+            "name":"BlueSea2",
+            "url":"https://raw.githubusercontent.com/w164955/Config/main/Icon/Emby/BlueSea2.png"
         },
         {
             "name":"Misty",
             "url":"https://raw.githubusercontent.com/w164955/Config/main/Icon/Emby/Misty.png"
         },
         {
-            "name":"MJJ",
-            "url":"https://raw.githubusercontent.com/w164955/Config/main/Icon/Emby/MJJ.png"
+            "name":"MJJ_EMBY1",
+            "url":"https://raw.githubusercontent.com/w164955/Config/main/Icon/Emby/MJJ_EMBY1.png"
+        }, 
+        {
+            "name":"MJJ_EMBY2",
+            "url":"https://raw.githubusercontent.com/w164955/Config/main/Icon/Emby/MJJ_EMBY2.png"
         },
         {
             "name":"peach",
@@ -41,6 +61,10 @@
         {
             "name":"Froghub",
             "url":"https://raw.githubusercontent.com/w164955/Config/main/Icon/Emby/Froghub.png"
+        },
+        {
+            "name":"Cc",
+            "url":"https://raw.githubusercontent.com/w164955/Config/main/Icon/Emby/Cc.png"
         },
         {
             "name":"Google_Drive",
