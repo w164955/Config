@@ -26,7 +26,7 @@
             "name":"Jmsooo2",
             "url":"https://raw.githubusercontent.com/w164955/Config/main/Icon/Emby/Jmsooo2.png"
         },
-       // {
+        {
             "name":"MisakaF",
             "url":"https://raw.githubusercontent.com/w164955/Config/main/Icon/Emby/MisakaF.png"
         },
@@ -50,15 +50,15 @@
             "name":"MJJ_EMBY2",
             "url":"https://raw.githubusercontent.com/w164955/Config/main/Icon/Emby/MJJ_EMBY2.png"
         },
-       // {
+        {
             "name":"peach",
             "url":"https://raw.githubusercontent.com/w164955/Config/main/Icon/Emby/peach.png"
         },
-       // {
+        {
             "name":"Orange",
             "url":"https://raw.githubusercontent.com/w164955/Config/main/Icon/Emby/Orange.png"
         },
-       // {
+        {
             "name":"Froghub",
             "url":"https://raw.githubusercontent.com/w164955/Config/main/Icon/Emby/Froghub.png"
         },
@@ -66,7 +66,7 @@
             "name":"Cc",
             "url":"https://raw.githubusercontent.com/w164955/Config/main/Icon/Emby/Cc.png"
         },
-        //{
+        {
             "name":"Infinity-fly",
             "url":"https://raw.githubusercontent.com/w164955/Config/main/Icon/Emby/Infinity-fly.png"
         }     
