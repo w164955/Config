@@ -39,6 +39,14 @@
             "url":"https://raw.githubusercontent.com/w164955/Config/main/Icon/Emby/BlueSea2.png"
         },
         {
+            "name":"MisakaF",
+            "url":"https://raw.githubusercontent.com/w164955/Config/main/Icon/Emby/MisakaF.png"
+        },
+        {
+            "name":"Misty",
+            "url":"https://raw.githubusercontent.com/w164955/Config/main/Icon/Emby/Misty.png"
+        },
+        {
             "name":"MJJ_EMBY1",
             "url":"https://raw.githubusercontent.com/w164955/Config/main/Icon/Emby/MJJ_EMBY1.png"
         }, 
@@ -51,12 +59,28 @@
             "url":"https://raw.githubusercontent.com/w164955/Config/main/Icon/Emby/Cc.png"
         },
         {
+            "name":"peach",
+            "url":"https://raw.githubusercontent.com/w164955/Config/main/Icon/Emby/peach.png"
+        },
+        {
+            "name":"Orange",
+            "url":"https://raw.githubusercontent.com/w164955/Config/main/Icon/Emby/Orange.png"
+        },
+        {
+            "name":"Froghub",
+            "url":"https://raw.githubusercontent.com/w164955/Config/main/Icon/Emby/Froghub.png"
+        },
+        {
             "name":"Infinity-fly",
             "url":"https://raw.githubusercontent.com/w164955/Config/main/Icon/Emby/Infinity_fly.png"
         },
         {
             "name":"gfwEmby",
             "url":"https://raw.githubusercontent.com/w164955/Config/main/Icon/Emby/gfwEmby.png"
+        },
+        {
+            "name":"Polo",
+            "url":"https://raw.githubusercontent.com/w164955/Config/main/Icon/Emby/Polo.png"
         }, 
         {
             "name":"Google_Drive",
