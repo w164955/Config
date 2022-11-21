@@ -66,6 +66,14 @@ DOMAIN,us-s1.gfwemby.org
 DOMAIN,aws-us.gfwemby.org
 DOMAIN,aws-jp.gfwemby.org
 
+# > Polo(25天登陆一次)
+DOMAIN,df.poloemby.xyz
+DOMAIN,cu.poloemby.xyz
+DOMAIN,nlz.poloemby.xyz
+DOMAIN,zf.poloemby.xyz
+DOMAIN,zfsg.poloemby.xyz
+DOMAIN,us.poloemby.xyz
+
 //none
 # > Singularity服务器
 DOMAIN,singularity.deja-vu.beauty
