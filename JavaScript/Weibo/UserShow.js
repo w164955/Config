@@ -8,7 +8,7 @@ const verified_detail = {
       "key": 1,
       "weight": 10,
       "sub_key": 0,
-      "desc": "最美小仙女"
+      "desc": "Surge Pro"
     }
   ]
 };
