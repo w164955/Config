@@ -15,9 +15,9 @@ const verified_detail = {
 obj.geo_enabled = false;
 obj.verified_detail = verified_detail;
 obj.svip = 1;
-obj.verified_reason = "最美小仙女";
+obj.verified_reason = "Surge Pro";
 obj.statuses_count = 0;
-obj.orange_v = "最美小仙女";
+obj.orange_v = "Surge Pro";
 obj.verified_level = 2;
 obj.avatargj_id = "gj_vip_583";
 obj.verified = true;
@@ -47,7 +47,7 @@ const verified = {
     "oid": ""
   },
   "icon": "https:\/\/h5.sinaimg.cn\/upload\/1059\/799\/2020\/05\/19\/verified.png",
-  "desc": "最美小仙女"
+  "desc": "Surge Pro"
 };
 // if(obj.infoList[0].actionlog.ext !='name:verified') obj.infoList.splice(0, 0, verified);
 obj.badge = {
