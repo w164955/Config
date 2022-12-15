@@ -22,7 +22,7 @@ hostname = %APPEND% testflight.apple.com
 //4: 获取tf信息的脚本与TestFlight账户管理模块冲突，使用的时候先关一下该模块
 
 
-//VCIvwk2g,DRidxxgv,1G3zEeId,kTzGrDZm,cM62XlVE
+//VCIvwk2g,1G3zEeId,kTzGrDZm,cM62XlVE,lNmLTx8d,8ukHjYtR
 
 //https://testflight.apple.com/join/VCIvwk2g
 //Quantumult X
@@ -53,6 +53,12 @@ hostname = %APPEND% testflight.apple.com
 
 //https://testflight.apple.com/join/cM62XlVE
 //V2EX
+
+//https://testflight.apple.com/join/lNmLTx8d
+//小象下载
+
+//https://testflight.apple.com/join/8ukHjYtR
+//Tomemo
 
 //https://testflight.apple.com/join/rW94kiLo
 //FastClip（不接受新成员）
