@@ -74,6 +74,9 @@ DOMAIN,zf.poloemby.xyz
 DOMAIN,zfsg.poloemby.xyz
 DOMAIN,us.poloemby.xyz
 
+# > Nebula-Account
+DOMAIN,direct.nebula-emby.com
+
 //none
 # > Singularity服务器
 DOMAIN,singularity.deja-vu.beauty
