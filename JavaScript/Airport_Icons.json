@@ -1,0 +1,14 @@
+{
+    "name":"Airport",
+    "description":"By  WAliensky",
+    "icons":[
+      {
+            "name":"EXFLUX",
+            "url":"https://raw.githubusercontent.com/w164955/Config/main/Icon/Airport/EXFLUX.png"
+        } ,  
+      {
+            "name":"一元机场",
+            "url":"https://raw.githubusercontent.com/w164955/Config/main/Icon/Airport/yiyuanjichang.png"
+        } 
+    ]
+}
