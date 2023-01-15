@@ -4,15 +4,15 @@
     "icons":[
       {
             "name":"EXFLUX",
-            "url":"https://raw.githubusercontent.com/w164955/Config/main/Icon/Airport/EXFLUX.png"
+            "url":"https:\/\/raw.githubusercontent.com\/w164955\/Config\/main/Icon\/Airport\/EXFLUX.png"
         } ,  
       {
             "name":"一元机场",
-            "url":"https://raw.githubusercontent.com/w164955/Config/main/Icon/Airport/yiyuanjichang.png"
+            "url":"https:\/\/raw.githubusercontent.com\/w164955\/Config\/main/Icon\/Airport\/yiyuanjichang.png"
         },
         {
             "name":"TAG",
-            "url":"https://raw.githubusercontent.com/w164955/Config/main/Icon/Airport/TAG.png"
+            "url":"https:\/\/raw.githubusercontent.com\/w164955\/Config\/main/Icon\/Airport\/TAG.png"
         } 
     ]
 }
