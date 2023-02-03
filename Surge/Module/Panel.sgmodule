@@ -1,5 +1,5 @@
-#!name=Panel
-#!desc=Update-2022.9.6
+#!name=策略面板
+#!desc=Update-2023.2.3
 #!system=ios
 
 [Panel]
@@ -9,17 +9,13 @@
 #详细的显示你当前的网络信息
 NetInfoPanel=title="",content="",style=info,script-name=net-info-panel.js,update-interval=1
 
+☁️ WARP Panel = title="☁️ 𝙒𝘼𝙍𝙋 𝙄𝙣𝙛𝙤", icon="lock.icloud.fill", script-name=☁️ WARP Panel
+
 # > 流媒体解锁检测
 stream-all = script-name=stream-all,update-interval=3600
 
 # 机场信息
 #Sub_info = script-name=Sub_info,update-interval=3600
-
-Sub_info1 = script-name=Sub_info1,update-interval=3600
-Sub_info2 = script-name=Sub_info2,update-interval=3600
-
-#快速清除Surge的DNS缓存
-FlushDNS = script-name=FlushDNS,update-interval=600
 
 #流量统计
 TrafficStatistics = script-name=TrafficStatistics, update-interval=1
@@ -31,14 +27,13 @@ TrafficStatistics = script-name=TrafficStatistics, update-interval=1
 #详细的显示你当前的网络信息
 net-info-panel.js=script-path=https://raw.githubusercontent.com/Rabbit-Spec/Surge/Master/Module/Panel/Network-Info/Moore/Network-Info.js,type=generic,timeout=30
 
+☁️ WARP Panel = type=generic, timeout=15, script-path=https://raw.githubusercontent.com/VirgilClyne/Cloudflare/main/js/Cloudflare.1.1.1.1.panel.js
+
 # > 流媒体解锁检测
 stream-all = type=generic,timeout=30,script-path=https://raw.githubusercontent.com/Godrock/Profiles/main/JavaScript/Surge/Stream-all.js,argument=title=UnlockDetection&icon=display&color=#ff0000
 
 # 机场信息
 #Sub_info = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/mieqq/mieqq/master/sub_info_panel.js,script-update-interval=0,argument=url=[URL encode 后的机场节点链接]&reset_day=到期时间&title=机场名称&icon=externaldrive.fill.badge.icloud&color=#007aff
-
-#快速清除Surge的DNS缓存
-FlushDNS = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/Rabbit-Spec/Surge/Master/Module/Panel/Flush-DNS/Moore/Flush-DNS.js,argument=title=DNS FLush&icon=cube&color=#afe59a&server=false
 
 #流量统计 点击以切换网络界面
 TrafficStatistics = type=generic,timeout=10,script-path= https://raw.githubusercontent.com/fishingworld/something/main/PanelScripts/trafficstatistics.js, argument=icon=bonjour&color=#007aff
