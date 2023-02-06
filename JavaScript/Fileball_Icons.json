@@ -97,6 +97,10 @@
         {
             "name":"Google_Drive",
             "url":"https://raw.githubusercontent.com/w164955/Config/main/Icon/Emby/Google_Drive.png"
-        } 
+        },
+        {
+            "name":"Aliyundrive",
+            "url":"https://raw.githubusercontent.com/w164955/Config/main/Icon/Emby/Aliyundrive.png"
+        }  
     ]
 }
