@@ -1,0 +1,14 @@
+#!name=兼容模式
+#!desc=启用tun模式并强制80端口使用HTTP代理
+#!system=ios
+
+[General]
+compatibility-mode = 3
+force-http-engine-hosts = %APPEND% -<ip-address>, *
+
+[Rule]
+# 适应bilibili去广告与兼容模式冲突
+IP-CIDR,203.107.1.1/24,REJECT,no-resolve
+
+[MITM]
+tcp-connection = true
