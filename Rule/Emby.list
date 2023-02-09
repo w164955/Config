@@ -77,6 +77,9 @@ DOMAIN,us.poloemby.xyz
 # > Nebula-Account
 DOMAIN,direct.nebula-emby.com
 
+# > 卡戎（签到50分保号）
+DOMAIN,play.charontv.com
+
 //none
 # > Singularity服务器
 DOMAIN,singularity.deja-vu.beauty
