@@ -18,6 +18,8 @@
 哔哩哔哩 = type=http-request,pattern=^https:\/\/m.bilibili.com/$,script-path=https://raw.githubusercontent.com/ClydeTime/Quantumult/main/Script/Task/BiliBili.js
 # > 伊利乳品 小程序获取
 伊利乳品 = type=http-request, requires-body=1, pattern=https:\/\/club\.yili\.com\/MALLIFChe\/MCSWSIAPI\.asmx\/Call,script-path=https://raw.githubusercontent.com/id77/QuantumultX/master/task/yiLi.cookie.js
+# > 交管12123 打开 交管12123支付宝小程序 登录即可自动抓取Token
+12123_Token = type=http-request,pattern=^https:\/\/miniappcsfw\.122\.gov\.cn:8443\/openapi\/invokeApi\/business\/biz,requires-body=1,max-size=0,timeout=1000,script-path=https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/get_12123_token.js,script-update-interval=0
 # > 吾爱破解 登陆 https://www.52pojie.cn/home.php
 吾爱获取 = type=http-request,pattern=https:\/\/www\.52pojie\.cn\/home\.php\?,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/52pojie-DailyBonus/52pojie.js
 # > 阿里云盘 app获取
@@ -26,4 +28,4 @@
 # 分割线——————————————————————————
 
 [MITM]
-hostname = %APPEND% i.meituan.com, m.weibo.cn, user-api.smzdm.com, club.yili.com, app.bilibili.com, m.bilibili.com, www.52pojie.cn, mobile.ximalaya.com, auth.aliyundrive.com
+hostname = %APPEND% i.meituan.com, m.weibo.cn, user-api.smzdm.com, club.yili.com, app.bilibili.com, m.bilibili.com, miniappcsfw.122.gov.cn:8443, miniappcsfw.122.gov.cn, www.52pojie.cn, mobile.ximalaya.com, auth.aliyundrive.com
