@@ -5,6 +5,8 @@
 # 分割线——————————————————————————
 
 [Script]
+# > 京东签到
+京东签到 = type=http-request,requires-body=1,pattern=^https:\/\/(api\.m|me-api|ms\.jr)\.jd\.com\/(client\.action\?functionId=signBean|user_new\/info\/GetJDUserInfoUnion\?|gw\/generic\/hy\/h5\/m\/appSign\?),script-path=https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js
 # > 喜马拉雅 app获取
 喜马拉雅 = script-path=https://raw.githubusercontent.com/ClydeTime/Quantumult/main/Script/Task/xmlySign.js,requires-body=0,type=http-request,pattern=^https?:\/\/mobile\.ximalaya\.com\/app-skin-service\/skin\/
 # > 美团 app获取
@@ -28,4 +30,4 @@
 # 分割线——————————————————————————
 
 [MITM]
-hostname = %APPEND% i.meituan.com, m.weibo.cn, user-api.smzdm.com, club.yili.com, app.bilibili.com, m.bilibili.com, miniappcsfw.122.gov.cn:8443, miniappcsfw.122.gov.cn, www.52pojie.cn, mobile.ximalaya.com, auth.aliyundrive.com
+hostname = %APPEND% api.m.jd.com, ms.jr.jd.com, me-api.jd.com, i.meituan.com, m.weibo.cn, user-api.smzdm.com, club.yili.com, app.bilibili.com, m.bilibili.com, miniappcsfw.122.gov.cn:8443, miniappcsfw.122.gov.cn, www.52pojie.cn, mobile.ximalaya.com, auth.aliyundrive.com
