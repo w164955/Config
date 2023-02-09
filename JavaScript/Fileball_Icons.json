@@ -93,6 +93,18 @@
         {
             "name":"Sela",
             "url":"https://raw.githubusercontent.com/w164955/Config/main/Icon/Emby/Sela.png"
+        }, 
+        {
+            "name":"Charon",
+            "url":"https://raw.githubusercontent.com/w164955/Config/main/Icon/Emby/Charon.png"
+        }, 
+        {
+            "name":"Ysk",
+            "url":"https://raw.githubusercontent.com/w164955/Config/main/Icon/Emby/Ysk.png"
+        }, 
+        {
+            "name":"Skqs",
+            "url":"https://raw.githubusercontent.com/w164955/Config/main/Icon/Emby/Skqs.png"
         },
         {
             "name":"Google_Drive",
