@@ -1,0 +1,456 @@
+{
+  "id": "w164955.app.sub",
+  "name": "WAliensky 应用订阅",
+  "author": "@WAliensky",
+  "icon": "https://raw.githubusercontent.com/w164955/Config/main/Icon/WAliensky.png",
+  "repo": "https://github.com/w164955/Config",
+  "apps": [
+    {
+      "id": "gistBackup",
+      "name": "Gist备份",
+      "keys": ["@gist.token", "@gist.username"],
+      "author": "@dompling",
+      "icons": [
+        "https://raw.githubusercontent.com/Former-Years/icon/master/github-bf.png",
+        "https://raw.githubusercontent.com/Former-Years/icon/master/github-bf.png"
+      ],
+      "descs_html": [
+        "Token的获取方式:",
+        "头像菜单->\n      Settings ->\n      Developer settings ->\n      Personal access tokens ->\n      Generate new token ->\n      在里面找到 gist 勾选提交"
+      ],
+      "scripts": [
+        {
+          "name": "备份 Gist",
+          "script": "https://raw.githubusercontent.com/dompling/Script/master/gist/backup.js"
+        },
+        {
+          "name": "从 Gist 恢复",
+          "script": "https://raw.githubusercontent.com/dompling/Script/master/gist/restore.js"
+        }
+      ],
+      "settings": [
+        {
+          "id": "@gist.username",
+          "name": "用户名",
+          "val": null,
+          "type": "text",
+          "placeholder": "github 用户名",
+          "desc": "必填"
+        },
+        {
+          "id": "@gist.token",
+          "name": "Personal access tokens",
+          "val": null,
+          "type": "text",
+          "placeholder": "github personal access tokens",
+          "desc": "必填"
+        }
+      ]
+    },
+    {
+      "id": "JD_Cookies_remark",
+      "name": "登陆助手",
+      "keys": ["CookieIndex", "@jd_ck_remark.remark", "@jd_ck_remark.mute"],
+      "descs_html": [
+        "请勿随意在输入框修改内容，建议通过脚本去获取cookie，若要修改，请按照JSON 格式修改（<a href=\"https://www.bejson.com/json/format\">可使用此JSON校验</a> ，或点击右上角按钮🔘进行校验(如有弹窗提示则为异常JSON)）。",
+        "脚本地址【<a href=\"https://jdsharedresourcescdn.azureedge.net/jdresource/JD_extra_cookie.js\">京东多 CK获取</a>】,并按照此脚本注释进行配置",
+        "可以修改的字段，nickname,mobile",
+        "示例：[{username:\"yaya\",nickname:\"I'm YaYa man\",mobile:\"1234567890\"}]",
+        "可以根据 下标、username、nickname、status 字段检索京东多账号 ck"
+      ],
+      "settings": [
+        {
+          "id": "@jd_ck_remark.mute",
+          "name": "静音",
+          "val": false,
+          "type": "boolean",
+          "desc": "不会执行通知提示"
+        },
+        {
+          "id": "CookieIndex",
+          "name": "默认账号",
+          "val": 0,
+          "type": "text",
+          "autoGrow": false,
+          "rows": 2,
+          "placeholder": "cookie 下标（0）"
+        },
+        {
+          "id": "@jd_ck_remark.keyword",
+          "name": "检索条件",
+          "val": null,
+          "type": "text",
+          "autoGrow": false,
+          "rows": 2,
+          "placeholder": "下标（0）、username、nickname、status 的值"
+        },
+        {
+          "id": "@jd_ck_remark.remark",
+          "name": "CK 备注列表",
+          "val": "",
+          "type": "textarea",
+          "autoGrow": false,
+          "rows": 8,
+          "desc": "CK 备注列表 (JSON 格式)"
+        }
+      ],
+      "icons": [
+        "https://raw.githubusercontent.com/Orz-3/mini/master/jd.png",
+        "https://raw.githubusercontent.com/Orz-3/task/master/jd.png"
+      ],
+      "author": "@dompling",
+      "repo": "https://github.com/dompling/Script/blob/master/jd/jd_cookie_search.js",
+      "script": "https://raw.githubusercontent.com/dompling/Script/master/jd/jd_cookie_search.js"
+    },
+    {
+      "id": "JD_Cookies",
+      "name": "京东账号",
+      "keys": ["CookiesJD", "cks_get_mute"],
+      "descs_html": [
+        "请勿随意在输入框修改内容，建议通过脚本去获取cookie，若要修改，请按照JSON 格式修改（<a href=\"https://www.bejson.com/json/format\">可使用此JSON校验</a> ，或点击右上角按钮🔘进行校验(如有弹窗提示则为异常JSON)）。",
+        "示例：[{\"userName\":\"jd_xxx\",\"cookie\":\"pt_key=AAJ;pt_pin=jd_xxx;\"},{\"userName\":\"jd_66\",\"cookie\":\"pt_key=AAJ;pt_pin=jd_66;\"}]",
+        "脚本地址【<a href=\"https://jdsharedresourcescdn.azureedge.net/jdresource/JD_extra_cookie.js\">京东多 CK获取</a>】,并按照此脚本注释进行配置",
+        "使用方式【<a href=\"https://home.m.jd.com/myJd/newhome.action\">个人中心</a>】获取对应的数据Code",
+        "注1：如与NobyDa的京东cookie重复，建议在此处删除重复的cookie",
+        "注2：删除条件，是用来清除不需要的ck，条件值为京东 ck 的第几个，如第一个：1，第二个：2；多个请使用,分割。删除ck 脚本不会去清理野比的ck，请谨慎使用。删除成功之后，请手动刷新 boxjs"
+      ],
+      "settings": [
+        {
+          "id": "cks_get_mute",
+          "name": "静音获取",
+          "val": false,
+          "type": "boolean",
+          "desc": "更新时，不会执行通知提示"
+        },
+        {
+          "id": "del_condition",
+          "name": "删除条件",
+          "val": "",
+          "type": "text",
+          "desc": "输入的条件,运行一次之后则会清空条件"
+        },
+        {
+          "id": "CookiesJD",
+          "name": "CK 列表",
+          "val": "",
+          "type": "textarea",
+          "autoGrow": false,
+          "rows": 8,
+          "desc": "CK 列表 (JSON 格式)"
+        }
+      ],
+      "icons": [
+        "https://raw.githubusercontent.com/Orz-3/mini/master/jd.png",
+        "https://raw.githubusercontent.com/Orz-3/task/master/jd.png"
+      ],
+      "author": "@dompling",
+      "repo": "https://github.com/dompling/Script/blob/master/jd/JD_extra.js",
+      "scripts": [
+        {
+          "name": "京东签到",
+          "script": "https://raw.githubusercontent.com/dompling/Script/master/jd/JD_extra_sign.js"
+        },
+        {
+          "name": "删除相关 ck",
+          "script": "https://raw.githubusercontent.com/dompling/Script/master/jd/jd_ck_del.js"
+        }
+      ]
+    },
+    {
+    "id": "BiliRegion",
+    "name": "哔哩番剧自动地区",
+    "descs_html": [
+      "<h4 align=\"center\">脚本配置请查看<a href=\"https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Bili_Auto_Regions.js\">脚本注释</a></h4>"
+    ],
+    "keys": ["BiliArea_Policy", "BiliArea_CN", "BiliArea_HK", "BiliArea_TW", "BiliArea_DF", "BiliArea_disabled"
+    ],
+    "settings": [
+    {
+      "id": "BiliAreaNotify",
+      "name": "静默运行",
+      "val": false,
+      "type": "boolean",
+      "desc": "开启后将不再发出切换策略通知"
+    },
+    {
+      "id": "BiliDoubanRating",
+      "name": "豆瓣评分",
+      "val": true,
+      "type": "boolean",
+      "desc": "关闭后将不再查询豆瓣评分, 可显著提高相关页面载入速度"
+    }, 
+    {
+      "id": "BiliArea_Policy",
+      "name": "策略组名",
+      "val": "",
+      "type": "text",
+      "placeholder": "(点击以展开说明)",
+      "desc": "哔哩哔哩分流的策略组名"
+    }, 
+    {
+      "id": "BiliArea_CN",
+      "name": "中国大陆-子策略名",
+      "val": "DIRECT",
+      "type": "text",
+      "placeholder": "(点击以展开说明)",
+      "desc": "哔哩哔哩分流策略组里的中国大陆子策略名"
+    }, 
+    {
+      "id": "BiliArea_HK",
+      "name": "中国香港-子策略名",
+      "val": "",
+      "type": "text",
+      "placeholder": "(点击以展开说明)",
+      "desc": "哔哩哔哩分流策略组里的香港子策略名"
+    },
+    {
+      "id": "BiliArea_TW",
+      "name": "中国台湾-子策略名",
+      "val": "",
+      "type": "text",
+      "placeholder": "(点击以展开说明)",
+      "desc": "哔哩哔哩分流策略组里的台湾子策略名"
+    },
+    {
+      "id": "BiliArea_DF",
+      "name": "后备-子策略名",
+      "val": "",
+      "type": "text",
+      "placeholder": "(点击以展开说明)",
+      "desc": "部分番剧可能会被屏蔽, 使用该策略以避免页面加载失败. 建议填写台湾子策略"
+    }, 
+     {
+      "id": "token_12123",
+      "name": "交管12123_Token",
+      "author": "@FoKit",
+      "descs_html": [
+        "交管12123_Token"
+      ],
+      "icons": [
+        "https://raw.githubusercontent.com/FoKit/Scripts/main/images/12123.png",
+        "https://raw.githubusercontent.com/FoKit/Scripts/main/images/12123.png"
+      ],
+      "keys": [
+        "token_12123",
+        "referer_12123"
+      ],
+      "settings": [
+        {
+          "id": "token_12123",
+          "name": "交管12123_Token",
+          "val": "",
+          "type": "text",
+          "desc": ""
+        },
+        {
+          "id": "referer_12123",
+          "name": "交管12123_Referer",
+          "val": "",
+          "type": "text",
+          "desc": ""
+        }
+      ]
+    },
+     {
+      "id": "jf",
+      "name": "京粉转链",
+      "desc": "在京东比价中增加京粉转链，如显示有转链信息（即使显示无详细返利信息）则可点击跳转跟单，如未显示返利信息则为未参加推广的商品，不会跳转。",
+      "keys": [
+        "jfCookie",
+        "jfUseConvert",
+        "jfAutoScheme",
+        "jfusejsapp",
+        "jfChooseScheme",
+        "chooseBrowser",
+        "jfDIYScheme"
+      ],
+      "settings": [
+        {
+          "id": "jfUseConvert",
+          "name": "开启转链",
+          "val": true,
+          "type": "boolean",
+          "desc": "是否开启京粉转链？"
+        },
+        {
+          "id": "jfAutoScheme",
+          "name": "自动目标",
+          "val": true,
+          "type": "boolean",
+          "desc": "开启后如转链成功有返利，点击通知跳转正在使用的 app，关闭则跳转自选的 app。"
+        },
+        {
+          "id": "jfChooseScheme",
+          "name": "自选目标",
+          "val": "jd",
+          "type": "radios",
+          "desc": "自选跳转的 app，仅在自动目标关闭时有效。",
+          "items": [
+            {
+              "key": "jd",
+              "label": "京东"
+            },
+            {
+              "key": "jx",
+              "label": "京喜"
+            },
+            {
+              "key": "jk",
+              "label": "京东健康"
+            },
+            {
+              "key": "js",
+              "label": "京东极速版"
+            },
+            {
+              "key": "browser",
+              "label": "浏览器"
+            }
+          ]
+        },
+        {
+          "id": "jfusejsapp",
+          "name": "京东极速版使用 app",
+          "val": false,
+          "type": "boolean",
+          "desc": "开启时对目标为京东极速版则跳转京东极速版，关闭则跳转浏览器，默认关闭。注意：即使开启，由于极速版 URL Scheme 问题，跳转后只能先加入购物车，返回原购物车界面进行结账，否则无法使用极速版优惠券。"
+        },
+        {
+          "id": "chooseBrowser",
+          "name": "浏览器目标",
+          "val": "Safari",
+          "type": "radios",
+          "desc": "自选跳转的浏览器。",
+          "items": [
+            {
+              "key": "Safari",
+              "label": "Safari"
+            },
+            {
+              "key": "Alook",
+              "label": "Alook"
+            },
+            {
+              "key": "DIY",
+              "label": "自定义"
+            }
+          ]
+        },
+        {
+          "id": "jfDIYScheme",
+          "name": "自定义浏览器",
+          "val": "",
+          "type": "textarea",
+          "placeholder": "Foxok://url?",
+          "autoGrow": true,
+          "rows": 2,
+          "desc": "自定义跳转浏览器 URL Scheme，拼接后会是 diy+convertURL，如 Foxok://url?convertURL"
+        },
+        {
+          "id": "jfCookie",
+          "name": "Cookie",
+          "type": "textarea",
+          "autoGrow": true,
+          "rows": 2,
+          "desc": "使用京粉的京东账号 Cookie，如不填则为京东系脚本中的第一个 Cookie。"
+        }
+      ],
+      "author": "@MuTu888",
+      "repo": "https://github.com/githubdulong/Script",
+      "icons": [
+        "https://is5-ssl.mzstatic.com/image/thumb/Purple125/v4/eb/a8/f6/eba8f63a-b550-4586-b5d3-f22c0718ef81/source/100x100bb.jpg",
+        "https://is5-ssl.mzstatic.com/image/thumb/Purple125/v4/eb/a8/f6/eba8f63a-b550-4586-b5d3-f22c0718ef81/source/100x100bb.jpg"
+      ]
+    },
+    {
+
+      "id": "Auto_join_TF",
+      "name": "TestFlight监控",
+      "author": "@MuTu888",
+      "script": "",
+      "descs_html": [
+        ""
+      ],
+      "icons": [
+        "https://raw.githubusercontent.com/githubdulong/Script/master/Images/testflight.png",
+        "https://raw.githubusercontent.com/githubdulong/Script/master/Images/testflight.png"
+      ],
+      "keys": [
+        "session_id",
+        "session_digest",
+        "request_id",
+        "APP_ID"
+      ],
+      "settings": [
+        {
+          "id": "APP_ID",
+          "name": "填写 APP_ID 多个用英文逗号隔开 示例：iSTXKF4K,INmLTx8d",
+          "val": "",
+          "type": "text",
+          "desc": ""
+       
+        }
+      ]
+    },
+    {
+      "id": "lkAliYunPanCheckIn",
+      "name": "阿里云盘签到",
+      "desc_html": "⚠️使用说明</br>详情【<a href='https://github.com/lowking/Scripts/blob/master/ali/aliYunPanCheckIn.js?raw=true'><font class='red--text'>点我查看</font></a>】",
+      "icons": [
+        "https://raw.githubusercontent.com/lowking/Scripts/master/doc/icon/aliYunPana.png",
+        "https://raw.githubusercontent.com/lowking/Scripts/master/doc/icon/aliYunPan.png"
+      ],
+      "keys": [
+        "lkAliYunPanTokenKey",
+        "lkAliYunPanRefreshTokenKey"
+      ],
+      "settings": [
+        {
+          "id": "lkIsEnableLogAliYunPanCheckIn",
+          "name": "开启/关闭日志",
+          "val": true,
+          "type": "boolean",
+          "desc": "默认开启"
+        },
+        {
+          "id": "lkNotifyOnlyFailAliYunPanCheckIn",
+          "name": "只当执行失败才通知",
+          "val": false,
+          "type": "boolean",
+          "desc": "默认关闭"
+        },
+        {
+          "id": "lkIsEnableTgNotifyAliYunPanCheckIn",
+          "name": "开启/关闭Telegram通知",
+          "val": false,
+          "type": "boolean",
+          "desc": "默认关闭"
+        },
+        {
+          "id": "lkTgNotifyUrlAliYunPanCheckIn",
+          "name": "Telegram通知地址",
+          "val": "",
+          "type": "text",
+          "desc": "Tg的通知地址，如：https://api.telegram.org/bot-token/sendMessage?chat_id=-100140&parse_mode=Markdown&text="
+        },
+        {
+          "id": "lkAliYunPanTokenKey",
+          "name": "阿里云盘token",
+          "val": "",
+          "type": "text",
+          "desc": "阿里云盘token"
+        },
+        {
+          "id": "lkAliYunPanRefreshTokenKey",
+          "name": "阿里云盘refresh_token",
+          "val": "",
+          "type": "text",
+          "desc": "阿里云盘refresh_token"
+        }
+      ],
+      "author": "@lowking",
+      "repo": "https://github.com/lowking/Scripts",
+      "script": "https://github.com/lowking/Scripts/blob/master/ali/aliYunPanCheckIn.js?raw=true"
+    }
+  ]
+}
