@@ -1,0 +1,51 @@
+{
+  "id": "w164955.app.sub",
+  "name": "WAliensky 应用订阅",
+  "author": "@WAliensky",
+  "icon": "https://raw.githubusercontent.com/w164955/Config/main/Icon/WAliensky.png",
+  "repo": "https://github.com/w164955/Config",
+  "apps": [
+    {
+      "id": "gistBackup",
+      "name": "Gist备份",
+      "keys": ["@gist.token", "@gist.username"],
+      "author": "@dompling",
+      "icons": [
+        "https://raw.githubusercontent.com/Former-Years/icon/master/github-bf.png",
+        "https://raw.githubusercontent.com/Former-Years/icon/master/github-bf.png"
+      ],
+      "descs_html": [
+        "Token的获取方式:",
+        "头像菜单->\n      Settings ->\n      Developer settings ->\n      Personal access tokens ->\n      Generate new token ->\n      在里面找到 gist 勾选提交"
+      ],
+      "scripts": [
+        {
+          "name": "备份 Gist",
+          "script": "https://raw.githubusercontent.com/dompling/Script/master/gist/backup.js"
+        },
+        {
+          "name": "从 Gist 恢复",
+          "script": "https://raw.githubusercontent.com/dompling/Script/master/gist/restore.js"
+        }
+      ],
+      "settings": [
+        {
+          "id": "@gist.username",
+          "name": "用户名",
+          "val": null,
+          "type": "text",
+          "placeholder": "github 用户名",
+          "desc": "必填"
+        },
+        {
+          "id": "@gist.token",
+          "name": "Personal access tokens",
+          "val": null,
+          "type": "text",
+          "placeholder": "github personal access tokens",
+          "desc": "必填"
+        }
+      ]
+    },
+    ]
+    }
