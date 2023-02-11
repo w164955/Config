@@ -5,47 +5,37 @@
   "icon": "https://avatars.githubusercontent.com/u/50817553",
   "repo": "https://github.com/w164955/Config",
   "apps": [
-    {
-      "id": "gistBackup",
-      "name": "Gist备份",
-      "keys": ["@gist.token", "@gist.username"],
-      "author": "@dompling",
-      "icons": [
-        "https://raw.githubusercontent.com/Former-Years/icon/master/github-bf.png",
-        "https://raw.githubusercontent.com/Former-Years/icon/master/github-bf.png"
-      ],
+   {
+      "id": "token_12123",
+      "name": "交管12123_Token",
+      "author": "@FoKit",
       "descs_html": [
-        "Token的获取方式:",
-        "头像菜单->\n      Settings ->\n      Developer settings ->\n      Personal access tokens ->\n      Generate new token ->\n      在里面找到 gist 勾选提交"
+        "交管12123_Token"
       ],
-      "scripts": [
-        {
-          "name": "备份 Gist",
-          "script": "https://raw.githubusercontent.com/dompling/Script/master/gist/backup.js"
-        },
-        {
-          "name": "从 Gist 恢复",
-          "script": "https://raw.githubusercontent.com/dompling/Script/master/gist/restore.js"
-        }
+      "icons": [
+        "https://raw.githubusercontent.com/FoKit/Scripts/main/images/12123.png",
+        "https://raw.githubusercontent.com/FoKit/Scripts/main/images/12123.png"
+      ],
+      "keys": [
+        "token_12123",
+        "referer_12123"
       ],
       "settings": [
         {
-          "id": "@gist.username",
-          "name": "用户名",
-          "val": null,
+          "id": "token_12123",
+          "name": "交管12123_Token",
+          "val": "",
           "type": "text",
-          "placeholder": "github 用户名",
-          "desc": "必填"
+          "desc": ""
         },
         {
-          "id": "@gist.token",
-          "name": "Personal access tokens",
-          "val": null,
+          "id": "referer_12123",
+          "name": "交管12123_Referer",
+          "val": "",
           "type": "text",
-          "placeholder": "github personal access tokens",
-          "desc": "必填"
+          "desc": ""
         }
       ]
     },
-    ]
-    }
+  ]
+}
