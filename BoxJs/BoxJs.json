@@ -156,6 +156,80 @@
         }
       ]
     },
+	{
+      "id": "BiliRegion",
+      "name": "哔哩番剧自动地区",
+      "descs_html": [
+        "<h4 align=\"center\">脚本配置请查看<a href=\"https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Bili_Auto_Regions.js\">脚本注释</a></h4>"
+      ],
+      "keys": ["BiliArea_Policy", "BiliArea_CN", "BiliArea_HK", "BiliArea_TW", "BiliArea_DF", "BiliArea_disabled"],
+      "settings": [
+	   {
+			"id": "BiliAreaNotify",
+			"name": "静默运行",
+			"val": false,
+			"type": "boolean",
+			"desc": "开启后将不再发出切换策略通知"
+		}, 
+		{
+			"id": "BiliDoubanRating",
+			"name": "豆瓣评分",
+			"val": true,
+			"type": "boolean",
+			"desc": "关闭后将不再查询豆瓣评分, 可显著提高相关页面载入速度"
+		}, 
+		{
+			"id": "BiliArea_Policy",
+			"name": "策略组名",
+			"val": "",
+			"type": "text",
+			"placeholder": "(点击以展开说明)",
+			"desc": "哔哩哔哩分流的策略组名"
+		},
+		{
+			"id": "BiliArea_CN",
+			"name": "中国大陆-子策略名",
+			"val": "DIRECT",
+			"type": "text",
+			"placeholder": "(点击以展开说明)",
+			"desc": "哔哩哔哩分流策略组里的中国大陆子策略名"
+		},
+		{
+			"id": "BiliArea_HK",
+			"name": "中国香港-子策略名",
+			"val": "",
+			"type": "text",
+			"placeholder": "(点击以展开说明)",
+			"desc": "哔哩哔哩分流策略组里的香港子策略名"
+		},
+		{
+			"id": "BiliArea_TW",
+			"name": "中国台湾-子策略名",
+			"val": "",
+			"type": "text",
+			"placeholder": "(点击以展开说明)",
+			"desc": "哔哩哔哩分流策略组里的台湾子策略名"
+		},
+		{
+			"id": "BiliArea_DF",
+			"name": "后备-子策略名",
+			"val": "",
+			"type": "text",
+			"placeholder": "(点击以展开说明)",
+			"desc": "部分番剧可能会被屏蔽, 使用该策略以避免页面加载失败. 建议填写台湾子策略"
+		},
+		{
+			"id": "BiliArea_disabled",
+			"name": "WiFi黑名单",
+			"val": "",
+			"type": "text",
+			"placeholder": "(点击以展开说明)",
+			"desc": "WiFi名称以逗号分隔, 名单内将跳过策略切换"
+		}],
+      "author": "@NobyDa",
+      "repo": "https://github.com/NobyDa/Script/blob/master/Surge/JS/Bili_Auto_Regions.js",
+      "icons": ["https://raw.githubusercontent.com/NobyDa/mini/master/Alpha/bilibili.png", "https://raw.githubusercontent.com/NobyDa/mini/master/Color/bilibili.png"]
+	},
     {
       "id": "token_12123",
       "name": "交管12123_Token",
@@ -188,7 +262,7 @@
         }
       ]
     },
-     {
+    {
       "id": "jf",
       "name": "京粉转链",
       "desc": "在京东比价中增加京粉转链，如显示有转链信息（即使显示无详细返利信息）则可点击跳转跟单，如未显示返利信息则为未参加推广的商品，不会跳转。",
