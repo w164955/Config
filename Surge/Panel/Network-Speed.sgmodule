@@ -2,6 +2,7 @@
 #!desc=默认 1MB
 
 [Panel]
+# 网络速率
 Network-Speed = script-name=Network-Speed,update-interval=-1
 
 [Script]
