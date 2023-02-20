@@ -7,7 +7,7 @@
 Network_Information = title="",content="",style=info,script-name=Network_Information,update-interval=1
 [Script]
 # > 详细的显示你当前的网络信息
-Network_Information = script-path=https://raw.githubusercontent.com/Rabbit-Spec/Surge/Master/Module/Panel/Network-Info/Moore/Network-Info.js,type=generic,timeout=30
+Network_Information = script-path=https://raw.githubusercontent.com/w164955/Config/main/JavaScript/Network_Information.js,type=generic,timeout=30
 
 [Host]
 ip-api.com = 208.95.112.1
