@@ -2,9 +2,9 @@
 #!desc=默认 1MB
 
 [Panel]
-# 网络速率
+# > 网络速率
 Network-Speed = script-name=Network-Speed,update-interval=-1
 
 [Script]
-# 网络速率
+# > 网络速率
 Network-Speed = type=generic,timeout=60,script-path=https://raw.githubusercontent.com/xream/scripts/main/surge/modules/network-speed/index.js,argument=icon=tray.and.arrow.down.fill&icon-color=#007aff&mb=1
