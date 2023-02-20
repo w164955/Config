@@ -7,4 +7,4 @@
 Connectivity_Test = script-name=Connectivity_Test,update-interval=1
 
 [Script]
-Connectivity_Test = type=generic,timeout=3,script-path= https://raw.githubusercontent.com/w164955/Config/main/JavaScript/ConnectivityTest.js,argument=title=Connectivity Test&icon=icloud.and.arrow.down&color=#FF9F0A&server=false
+Connectivity_Test = type=generic,timeout=3,script-path= https://raw.githubusercontent.com/w164955/Config/main/JavaScript/ConnectivityTest.js,argument=title=Connectivity Test&icon=network.badge.shield.half.filled&color=#007aff&server=false
