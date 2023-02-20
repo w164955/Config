@@ -13,8 +13,8 @@ await Promise.all([http('Baidu'),http('Google'),http('Github'),http('Youtube'),h
 	$done({
     title: 'Network Connectivity Test',
     content: x.join('\n'),
-    icon: 'timer',
-    'icon-color': '#FF5A9AF9',
+    icon: 'network.badge.shield.half.filled',
+    'icon-color': '#007aff',
   })
 })
 })();
