@@ -3,9 +3,9 @@
 #!system=ios
 
 [Panel]
-# > 机场信息
+# 机场信息
 Airport_Information = script-name=Airport_Information,update-interval=3600
 
 [Script]
-# > 机场信息
+# 机场信息
 Airport_Information = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/getsomecat/GetSomeCats/Surge/modules/Panel/Sub-info/Moore/Sub-info.js,script-update-interval=0,argument=url=encode后的机场节点链接&reset_day=机场到期日期&title=你机场名字&icon=externaldrive.fill.badge.icloud=#007aff
