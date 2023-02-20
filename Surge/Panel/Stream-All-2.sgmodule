@@ -1,0 +1,9 @@
+#!name=流媒体解锁检测
+#!desc=Update-2023.2.20
+#!system=ios
+
+[Panel]
+Stream-All-2 = script-name=Stream-All-2, title="流媒体解锁检测", content="请刷新面板", update-interval=3600
+
+[Script]
+Stream-All-2 = type=generic, timeout=15, script-path=https://raw.githubusercontent.com/Rabbit-Spec/Surge/Master/Module/Panel/Stream-All/Moore/Stream-All.js
