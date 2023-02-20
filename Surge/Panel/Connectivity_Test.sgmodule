@@ -1,0 +1,10 @@
+#!name=Connectivity_Test
+#!desc=Update-2023.2.20
+#!system=ios
+
+[Script]
+Connectivity_Test = type=generic,timeout=3,script-path= https://raw.githubusercontent.com/w164955/Config/main/JavaScript/ConnectivityTest.js,argument=title=Connectivity Test&icon=icloud.and.arrow.down&color=#FF9F0A&server=false
+
+[Panel]
+#网络连通性测试
+Connectivity_Test = script-name=Connectivity_Test,update-interval=1
