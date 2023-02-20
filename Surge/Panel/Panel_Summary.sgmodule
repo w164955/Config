@@ -1,0 +1,55 @@
+#!name=策略面板
+#!desc=Update-2023.2.20
+#!system=ios
+
+[Panel]
+# > Surge Pro标题,可显示启动时间,点击刷新为重载配置
+SurgePro_ReloadProfile = script-name=SurgePro_ReloadProfile, update-interval=1
+
+# > 网络连通性测试
+Connectivity_Test = script-name=Connectivity_Test,update-interval=1
+
+# > 详细的显示你当前的网络信息
+Network_Information = title="",content="",style=info,script-name=Network_Information,update-interval=1
+
+# > 机场信息
+Airport_Information = script-name=Airport_Information,update-interval=3600
+
+# > 流媒体解锁检测
+# Stream-All-1 = script-name=Stream-All-1,update-interval=3600
+Stream-All-2 = script-name=Stream-All-2, title="流媒体解锁检测", content="请刷新面板", update-interval=3600
+
+# > 流量统计
+TrafficStatistics = script-name=TrafficStatistics, update-interval=1
+
+# > 网络速率
+Network-Speed = script-name=Network-Speed,update-interval=-1
+
+[Script]
+# > Surge Pro标题,可显示启动时间,附带重载配置,点击刷新为重载配置
+SurgePro_ReloadProfile = type=generic, timeout=10, script-path = https://raw.githubusercontent.com/fishingworld/something/main/PanelScripts/surgepro_reloadprofile.js, argument=icon=crown.fill&color=#f6c970
+
+# > 网络连通性测试
+Connectivity_Test = type=generic,timeout=3,script-path= https://raw.githubusercontent.com/w164955/Config/main/JavaScript/ConnectivityTest.js,argument=title=Connectivity Test&icon=network.badge.shield.half.filled&color=#007aff&server=false
+
+# > 详细的显示你当前的网络信息
+Network_Information = script-path=https://raw.githubusercontent.com/w164955/Config/main/JavaScript/Network_Information.js,type=generic,timeout=30
+
+# > 机场信息
+Airport_Information = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/getsomecat/GetSomeCats/Surge/modules/Panel/Sub-info/Moore/Sub-info.js,script-update-interval=0,argument=url=encode后的机场节点链接&reset_day=机场到期日期&title=你机场名字&icon=externaldrive.fill.badge.icloud=#007aff
+
+# > 流媒体解锁检测
+Stream-All-1 = type=generic,timeout=30,script-path=https://raw.githubusercontent.com/w164955/Config/main/JavaScript/Stream-All-1.js,argument=title=UnlockDetection&icon=lock.open.display&color=#007aff
+Stream-All-2 = type=generic, timeout=15, script-path=https://raw.githubusercontent.com/w164955/Config/main/JavaScript/Stream-All-2.js
+
+# > 流量统计 点击以切换网络界面
+TrafficStatistics = type=generic,timeout=10,script-path= https://raw.githubusercontent.com/fishingworld/something/main/PanelScripts/trafficstatistics.js, argument=icon=bonjour&color=#007aff
+
+# > 网络速率
+Network-Speed = type=generic,timeout=60,script-path=https://raw.githubusercontent.com/xream/scripts/main/surge/modules/network-speed/index.js,argument=icon=tray.and.arrow.down.fill&icon-color=#007aff&mb=1
+
+
+
+[Host]
+#详细的显示你当前的网络信息
+ip-api.com = 208.95.112.1
