@@ -4,7 +4,7 @@
 [Script]
 Auto join TF = type=cron,cronexp=*/5 * * * * *,script-path=https://raw.githubusercontent.com/w164955/Config/main/JavaScript/Auto_join_TF.js?raw=true,wake-system=0,timeout=180
 
-TF信息获取 = type=http-request,pattern=^https:\/\/testflight\.apple\.com\/v3\/accounts/.*\/apps$,requires-body=0,script-path=https://raw.githubusercontent.com/w164955/Config/main/JavaScript/Auto_join_TF.js?raw=true
+//TF信息获取 = type=http-request,pattern=^https:\/\/testflight\.apple\.com\/v3\/accounts/.*\/apps$,requires-body=0,script-path=https://raw.githubusercontent.com/w164955/Config/main/JavaScript/Auto_join_TF.js?raw=true
 
 [MITM]
 hostname = %APPEND% testflight.apple.com
@@ -22,52 +22,41 @@ hostname = %APPEND% testflight.apple.com
 //4: 获取tf信息的脚本与TestFlight账户管理模块冲突，使用的时候先关一下该模块
 
 
-//VCIvwk2g,1G3zEeId,kTzGrDZm,cM62XlVE,lNmLTx8d,8ukHjYtR
+# Eita1W29, VCIvwk2g, MnuClabg, qDkBu2ur
 
+
+# > adguard pro
+//https://testflight.apple.com/join/Eita1W29
+
+
+# > Quantumult X
 //https://testflight.apple.com/join/VCIvwk2g
-//Quantumult X
 
-//https://testflight.apple.com/join/DRidxxgv
-//GoodNotes（√）
+# > Termius
+//https://testflight.apple.com/join/MnuClabg
 
-//https://testflight.apple.com/join/uN1vTqxk
-//Scriptable（√）
+# > pythonsita
+//https://testflight.apple.com/join/qDkBu2ur
 
-//https://testflight.apple.com/join/LPQmtkUs
-//google chrome（√）
+# > runestone（不接受新成员）
+//https://testflight.apple.com/join/kDXvZwlD
 
-//https://testflight.apple.com/join/1G3zEeId
-//Twitterrific: Tweet Your Way
-
-//https://testflight.apple.com/join/fHI8igli
-//JSBOX（√）
-
-//https://testflight.apple.com/join/kTzGrDZm
-//Lumy
-
-//https://testflight.apple.com/join/cg3ODdvg
-//计算器（√）
-
-//https://testflight.apple.com/join/XRUpdivD
-//汇率（√）
-
-//https://testflight.apple.com/join/cM62XlVE
-//V2EX
-
-//https://testflight.apple.com/join/lNmLTx8d
-//小象下载
-
+# > Tomemo（不接受新成员）
 //https://testflight.apple.com/join/8ukHjYtR
-//Tomemo
 
-//https://testflight.apple.com/join/rW94kiLo
-//FastClip（不接受新成员）
+# > JSBOX（不接受新成员）
+//https://testflight.apple.com/join/fHI8igli
 
+# > Edge（不接受新成员）
 //https://testflight.apple.com/join/PTxVw82a
-//Edge（不接受新成员）
+ # > 计算器（不接受新成员）
+//https://testflight.apple.com/join/cg3ODdvg
 
+# > Nomad（不接受新成员）
 //https://testflight.apple.com/join/sM0hQdpP
-//Nomad（不接受新成员）
 
+# > Speedtest（不接受新成员）
 //https://testflight.apple.com/join/J5QPqXKO
-//Speedtest（不接受新成员）
+
+    
+        
