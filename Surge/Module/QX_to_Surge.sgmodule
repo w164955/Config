@@ -1,0 +1,10 @@
+#!name=QX重写&规则集转化
+#!desc=使用方法在重写链接末尾面加上qx，在规则集链接末尾加上r_parser.list
+#!author=@小白脸 
+
+[Script]
+QX转换 = type=http-request,pattern=qx$|qx\?(n|y|x|del|i)=,requires-body=1,max-size=0,script-path=https://github.com/w164955/Config/blob/main/JavaScript/QX_Rewrite_Parser.js
+规则集转换 = type=http-request,pattern=r_parser.list$|r_parser.list\?.*,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/w164955/Config/main/JavaScript/Rule_Parser.js
+
+[MITM]
+hostname = %APPEND% github.com:443, raw.githubusercontent.com:443,gist.githubusercontent.com,gitlab.com
