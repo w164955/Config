@@ -8,8 +8,8 @@ Network_Location = script-name=Network_Location,update-interval=1
 
 [Script]
 # > 网络位置
-Network_Location = type=generic,timeout=60,script-path=https://raw.githubusercontent.com/xream/scripts/main/surge/modules/network-info/index.js,argument=icon=globe.asia.australia.fill&icon-color=#007aff
-网络变化 = type=event,event-name=network-changed,timeout=30,script-update-interval=3600,debug=false,enable=true,script-path=https://raw.githubusercontent.com/xream/scripts/main/surge/modules/network-info/event.js
+Network_Location = type=generic,timeout=60,script-path=https://raw.githubusercontent.com/w164955/Config/main/JavaScript/Network_Location.js,argument=icon=globe.asia.australia.fill&icon-color=#007aff
+网络变化 = type=event,event-name=network-changed,timeout=30,script-update-interval=3600,debug=false,enable=true,script-path=https://raw.githubusercontent.com/w164955/Config/main/JavaScript/Network_Location.js
 
 [Host]
 #详细的显示你当前的网络位置
