@@ -8,4 +8,4 @@ SurgePro_ReloadProfile = script-name=SurgePro_ReloadProfile, update-interval=1
 
 [Script]
 # > Surge Pro标题,可显示启动时间,附带重载配置,点击刷新为重载配置
-SurgePro_ReloadProfile = type=generic, timeout=10, script-path = https://raw.githubusercontent.com/w164955/Config/main/JavaScript/Surge_Pro.js, argument=icon=crown.fill&color=#f6c970
+SurgePro_ReloadProfile = type=generic, timeout=10, script-path = https://raw.githubusercontent.com/w164955/Config/main/JavaScript/Surge-Pro.js, argument=icon=crown.fill&color=#f6c970
