@@ -12,7 +12,16 @@ const isSurgeiOS = 'undefined' !== typeof $environment && $environment['surge-ve
 const isShadowrocket = 'undefined' !== typeof $rocket;
 const isLooniOS = 'undefined' != typeof $loon;
 const isLanceX = 'undefined' != typeof $native;
-
+var jsctype
+if (isStashiOS){
+    jsctype = "stash";
+}else if (isSurgeiOS || isLanceX){
+    jsctype = "surge";
+}else if (isShadowrocket){
+    jsctype = "shadowrocket";
+}else if (isLooniOS){
+    jsctype = "loon";
+}else{jsctype = "";};
 var name = "";
 var desc = "";
 var req
@@ -20,24 +29,27 @@ var urlArg
 if (isLooniOS || isSurgeiOS || isLanceX || isShadowrocket){
     req = $request.url.replace(/qx$|qx\?.*/,'');
     if ($request.url.indexOf("qx?") != -1){
-        urlArg = $request.url.split("qx?")[1];
+        urlArg = "?" + $request.url.split("qx?")[1];
     }else{urlArg = ""};
     
 }else if (isStashiOS){
     req = $request.url.replace(/qx\.stoverride$|qx\.stoverride\?.*/,'');
     if ($request.url.indexOf("qx.stoverride?") != -1){
-        urlArg = $request.url.split("qx.stoverride?")[1];
+        urlArg = "?" + $request.url.split("qx.stoverride?")[1];
     }else{urlArg = ""};
 };
 var rewriteName = req.substring(req.lastIndexOf('/') + 1).split('.')[0];
 var original = [];//用于获取原文行号
 //获取参数
-var nName = urlArg.indexOf("n=") != -1 ? (urlArg.split("n=")[1].split("&")[0].split("+")) : null;
-var Pin0 = urlArg.indexOf("y=") != -1 ? (urlArg.split("y=")[1].split("&")[0].split("+")).map(decodeURIComponent) : null;
-var Pout0 = urlArg.indexOf("x=") != -1 ? (urlArg.split("x=")[1].split("&")[0].split("+")).map(decodeURIComponent) : null;
-var iconStatus = urlArg.indexOf("i=") != -1 ? false : true;
+var nName = urlArg.search(/\?n=|&n=/) != -1 ? (urlArg.split(/\?n=|&n=/)[1].split("&")[0].split("+")) : null;
+var Pin0 = urlArg.search(/\?y=|&y=/) != -1 ? (urlArg.split(/\?y=|&y=/)[1].split("&")[0].split("+")).map(decodeURIComponent) : null;
+var Pout0 = urlArg.search(/\?x=|&x=/) != -1 ? (urlArg.split(/\?x=|&x=/)[1].split("&")[0].split("+")).map(decodeURIComponent) : null;
+var hnAdd = urlArg.search(/\?hnadd=|&hnadd=/) != -1 ? (urlArg.split(/\?hnadd=|&hnadd=/)[1].split("&")[0].replace(/%20/g,"").split(",")) : null;
+var hnDel = urlArg.search(/\?hndel=|&hndel=/) != -1 ? (urlArg.split(/\?hndel=|&hndel=/)[1].split("&")[0].replace(/%20/g,"").split(",")) : null;
+var jsConverter = urlArg.search(/\?jsc=|&jsc=/) != -1 ? (urlArg.split(/\?jsc=|&jsc=/)[1].split("&")[0].split("+")) : null;
+var iconStatus = urlArg.search(/\?i=|&i=/) != -1 ? false : true;
 var icon = "";
-var delNoteSc = urlArg.indexOf("del=") != -1 ? true : false;
+var delNoteSc = urlArg.search(/\?del=|&del=/) != -1 ? true : false;
 //修改名字和简介
 if (nName === null){
 	name = rewriteName;
@@ -61,7 +73,7 @@ if (iconStatus === false){
 	const stickerStartNum = 1000;
 const stickerSum = 335;
 let randomStickerNum = parseInt(stickerStartNum + Math.random() * stickerSum).toString();
-   icon = "#!icon=" + "https://raw.githubusercontent.com/chengkongyiban/StickerOnScreen/main/Stickers/Sticker_" + randomStickerNum +".png";
+   icon = "#!icon=" + "https://github.com/KeiKinn/StickerOnScreen/raw/main/Stickers/Sticker_" + randomStickerNum +".png";
 };
 !(async () => {
   let body = await http(req);
@@ -74,7 +86,11 @@ if(body == null){if(isSurgeiOS || isLanceX || isStashiOS){
 }else{//以下开始重写及脚本转换
 
 original = body.replace(/^ *(#|;|\/\/) */g,'#').replace(/\x20.+url-and-header\x20/,' url ').replace(/\x20+url\x20+/g," url ").replace(/(^[^#].+)\x20+\/\/.+/g,"$1").split("\n");
-	body = body.match(/[^\r\n]+/g);
+
+if (body.match(/\/\*+\n[\s\S]*\n\*+\/\n/)){
+body = body.replace(/[\s\S]*(\/\*+\n[\s\S]*\n\*+\/\n)[\s\S]*/,"$1").match(/[^\r\n]+/g);
+}else{
+    body = body.match(/[^\r\n]+/g);};
     
 let httpFrame = "";
 let URLRewrite = [];
@@ -86,9 +102,9 @@ let others = [];     //不支持的内容
 let MITM = "";
 
 body.forEach((x, y, z) => {
-	x = x.replace(/^ *(#|;|\/\/)/,'#').replace(/\x20.+url-and-header\x20/,' url ').replace(/\x20+url\x20+/," url ").replace(/hostname\x20*=/,"hostname=").replace(/(^[^#].+)\x20+\/\/.+/,"$1");
+	x = x.replace(/^ *(#|;|\/\/)/,'#').replace(/\x20.+url-and-header\x20/,' url ').replace(/\x20+url\x20+/," url ").replace(/^hostname\x20*=/,"hostname=").replace(/(^[^#].+)\x20+\/\/.+/,"$1");
 //去掉注释
-if(Pin0 != null)	{
+if (Pin0 != null)	{
 	for (let i=0; i < Pin0.length; i++) {
   const elem = Pin0[i];
 	if (x.indexOf(elem) != -1){
@@ -98,20 +114,52 @@ if(Pin0 != null)	{
 }else{};//去掉注释结束
 
 //增加注释
-if(Pout0 != null){
+if (Pout0 != null){
 	for (let i=0; i < Pout0.length; i++) {
   const elem = Pout0[i];
-	if (x.indexOf(elem) != -1 && x.indexOf("hostname=") == -1){
+	if (x.indexOf(elem) != -1 && x.search(/^hostname=/) == -1){
 		x = x.replace(/(.+)/,"#$1")
 	}else{};
 };//循环结束
 }else{};//增加注释结束
 
+//添加主机名
+if (hnAdd != null){
+	if (x.search(/^hostname=/) != -1){
+		x = x.replace(/\x20/g,"").replace(/(.+)/,`$1,${hnAdd}`).replace(/,{2,}/g,",");
+	}else{};
+}else{};//添加主机名结束
+
+//删除主机名
+if (hnDel != null && x.search(/^hostname=/) != -1){
+    x = x.replace(/\x20/g,"").replace(/^hostname=/,"").replace(/%.*%/,"").replace(/,{2,}/g,",").split(",");
+	for (let i=0; i < hnDel.length; i++) {
+  const elem = hnDel[i];
+if (x.indexOf(elem) != -1){
+  let hnInNum = x.indexOf(elem);
+  delete x[hnInNum];
+}else{};
+  };//循环结束
+x = "hostname=" + x
+}else{};//删除主机名结束
+
+//开启脚本转换
+if (jsConverter != null)	{
+	for (let i=0; i < jsConverter.length; i++) {
+  const elem = jsConverter[i];
+	if (x.indexOf(elem) != -1){
+		x = x.replace(/\x20(https?|ftp|file)(:\/\/.+\.js)/g,` $1$2_script-converter-${jsctype}.js`);
+	}else{};
+};//循环结束
+}else{};//开启脚本转换结束
+
+//剔除已注释重写
 if (delNoteSc === true && x.match(/^#/)){
 		x = x.replace(/(.+)/,'')
-};
+};//剔除已注释重写结束
+
 	let type = x.match(
-		/\x20url\x20script-|enabled=|\x20url\x20reject$|\x20url\x20reject-|\x20echo-response\x20|\-header\x20|^hostname| url 30|\x20(request|response)-body/
+		/\x20url\x20script-|\x20url\x20reject$|\x20url\x20reject-|\x20echo-response\x20|\-header\x20|^hostname| url 30|\x20(request|response)-body|[^\s]+ [^\s]+ [^\s]+ [^\s]+ [^\s]+ ([^\s] )?(https?|ftp|file)/
 	)?.[0];
 
 //判断注释
@@ -162,14 +210,14 @@ if (isLooniOS || isSurgeiOS || isLanceX || isShadowrocket){
 				
 				size = x.match(/\x20script[^\s]*(-body|-analyze)/) ? ', max-size=3145728' : '';
 				
-				proto = js.match('proto.js') ? ', binary-body-mode=true' : '';
+				proto = js.match(/proto\.js/i) ? ', binary-body-mode=true' : '';
 				}else if (isStashiOS){
 					
 				rebody = x.match(/\x20script[^\s]*(-body|-analyze)/) ? 'require-body: true' : '';
 				
 				size = x.match(/\x20script[^\s]*(-body|-analyze)/) ? 'max-size: 3145728' : '';
 				
-				proto = js.match('proto.js') ? 'binary-mode: true' : '';
+				proto = js.match(/proto\.js/i) ? 'binary-mode: true' : '';
 				};
 				
 				let scname = js.substring(js.lastIndexOf('/') + 1, js.lastIndexOf('.') );
@@ -192,39 +240,6 @@ if (isLooniOS || isSurgeiOS || isLanceX || isShadowrocket){
 						`${noteK2}${scname}_${y}:${noteKn4}url: ${js}${noteKn4}interval: 86400`);
 				};
 				
-				break;
-				
-//定时任务
-
-			case "enabled=":
-			
-			let cronExp
-				
-				if (isSurgeiOS || isLanceX || isShadowrocket || isLooniOS){
-				cronExp = x.replace(/\x20{2,}/g," ").split(" http")[0].replace(/#/,'');
-				}else if (isStashiOS){
-				cronExp = x.replace(/\x20{2,}/g," ").split(" http")[0].replace(/[^\s]+ ([^\s]+ [^\s]+ [^\s]+ [^\s]+ [^\s]+)/,'$1').replace(/^#/,'');
-				};
-				
-				let cronJs = x.split("://")[1].split(",")[0].replace(/(.+)/,'https://$1');
-				
-				let croName = x.replace(/\x20/g,"").split("tag=")[1].split(",")[0];
-				
-				if (isSurgeiOS || isLanceX || isShadowrocket){
-				z[y - 1]?.match(/^#/) && script.push(z[y - 1]);
-				script.push(
-						`${noteK}${croName} = type=cron, cronexp="${cronExp}", script-path=${cronJs}, timeout=60, wake-system=1`);	
-				}else if (isLooniOS){
-				z[y - 1]?.match(/^#/) && script.push(z[y - 1]);
-				script.push(
-						`${noteK}cron "${cronExp}" script-path=${cronJs}, timeout=60, tag=${croName}`);
-				}else if (isStashiOS){
-				z[y - 1]?.match(/^#/) && cron.push("    " + z[y - 1]);
-				cron.push(
-						`${noteK4}- name: ${croName}${noteKn6}cron: "${cronExp}"${noteKn6}timeout: 60`);
-				providers.push(
-						`${noteK2}${croName}:${noteKn4}url: ${cronJs}${noteKn4}interval: 86400`);	
-				};
 				break;
 				
 //reject-
@@ -341,13 +356,13 @@ others.push(lineNum + "行" + x)};
 			
 			    if (isLooniOS){
 					
-				MITM = x.replace(/%.*%/g," ").replace(/\x20/g,"").replace(/hostname=(.*),*$/, `[MITM]\n\nhostname = $1`);
+				MITM = x.replace(/%.*%/g," ").replace(/\x20/g,"").replace(/,*\x20*$/,"").replace(/hostname=(.*)/, `[MITM]\n\nhostname = $1`).replace(/=\x20,+/,"= ");
 				}else if (isSurgeiOS || isLanceX || isShadowrocket){
 					
-				MITM = x.replace(/%.*%/g,"").replace(/\x20/g,"").replace(/hostname=(.*),*$/, `[MITM]\n\nhostname = %APPEND% $1`);
+				MITM = x.replace(/%.*%/g,"").replace(/\x20/g,"").replace(/,{2,}/g,",").replace(/,*\x20*$/,"").replace(/hostname=(.*)/, `[MITM]\n\nhostname = %APPEND% $1`).replace(/%\x20,+/,"% ");
 				}else if (isStashiOS){
 					
-				MITM = x.replace(/%.*%/g,"").replace(/\x20/g,"").replace(/hostname=(.*),*$/, `t&2;mitm:\nt&hn;"$1"`);
+				MITM = x.replace(/%.*%/g,"").replace(/\x20/g,"").replace(/,{2,}/g,",").replace(/,*\x20*$/,"").replace(/hostname=(.*)/, `t&2;mitm:\nt&hn;"$1"`).replace(/",+/,'"');
 				};
 				break;
 				
@@ -365,8 +380,10 @@ others.push(lineNum + "行" + x)};
 				break;
 		
 			default:
+            
+            if (type.match(/\x20(request|response)-body/)){
+                
 //(response|request)-body
-				
 				let reBdType = x.match(' response-body ') ? 'response' : 'request';
 				
 				let reBdPtn = x.replace(/\x20{2,}/g," ").split(" url re")[0].replace(/^#/,"");
@@ -390,9 +407,37 @@ others.push(lineNum + "行" + x)};
 					script.push(
 							`${noteK4}- match: ${reBdPtn}${noteKn6}name: replaceBody_${y}${noteKn6}type: ${reBdType}${noteKn6}timeout: 30${noteKn6}require-body: true${noteKn6}max-size: 3145728${noteKn6}argument: |-${noteKn8}${reBdArg1}->${reBdArg2}`);
 					providers.push(
-							`${noteK2}replaceBody_${y}:${noteKn4}url: https://raw.githubusercontent.com/mieqq/mieqq/master/replace-body.js${noteKn4}interval: 86400`);
-						
-					}; 
+							`${noteK2}replaceBody_${y}:${noteKn4}url: https://raw.githubusercontent.com/mieqq/mieqq/master/replace-body.js${noteKn4}interval: 86400`);	
+					};
+                    }else if (type.match(/\x20(https?|ftp|file)/)){
+//定时任务                        
+                let cronExp
+				
+				if (isSurgeiOS || isLanceX || isShadowrocket || isLooniOS){
+				cronExp = x.replace(/\x20{2,}/g," ").split(/\x20(https?|ftp|file)/)[0].replace(/^#/,'');
+				}else if (isStashiOS){
+				cronExp = x.replace(/\x20{2,}/g," ").split(/\x20(https?|ftp|file)/)[0].replace(/[^\s]+ ([^\s]+ [^\s]+ [^\s]+ [^\s]+ [^\s]+)/,'$1').replace(/^#/,'');
+				};
+				
+				let cronJs = x.split("://")[0].replace(/.+\x20([^\s]+)$/,"$1") + "://" + x.split("://")[1].split(",")[0];
+				
+				let croName = cronJs.substring(cronJs.lastIndexOf('/') + 1, cronJs.lastIndexOf('.') );
+				
+				if (isSurgeiOS || isLanceX || isShadowrocket){
+				z[y - 1]?.match(/^#/) && script.push(z[y - 1]);
+				script.push(
+						`${noteK}${croName} = type=cron, cronexp="${cronExp}", script-path=${cronJs}, timeout=60, wake-system=1`);	
+				}else if (isLooniOS){
+				z[y - 1]?.match(/^#/) && script.push(z[y - 1]);
+				script.push(
+						`${noteK}cron "${cronExp}" script-path=${cronJs}, timeout=60, tag=${croName}`);
+				}else if (isStashiOS){
+				z[y - 1]?.match(/^#/) && cron.push("    " + z[y - 1]);
+				cron.push(
+						`${noteK4}- name: ${croName}${noteKn6}cron: "${cronExp}"${noteKn6}timeout: 60`);
+				providers.push(
+						`${noteK2}${croName}:${noteKn4}url: ${cronJs}${noteKn4}interval: 86400`);	};
+                    };//定时任务转换结束
 				}
 		} //switch结束
 	
