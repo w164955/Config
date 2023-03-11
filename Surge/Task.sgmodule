@@ -5,6 +5,8 @@
 # 分割线——————————————————————————
 
 [Script]
+# > Bing 领取积分🎉（积分可兑换京东E卡或抽奖）
+Bing积分 = type=cron,cronexp="0 10 0 * * ?",wake-system=1,script-path= https://raw.githubusercontent.com/lowking/Scripts/master/bing/bingPoint.js
 # > 喜马拉雅
 喜马拉雅 = type=cron,cronexp=30 0 0 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/ClydeTime/Quantumult/main/Script/Task/xmlySign.js,script-update-interval=0,timeout=30
 # > 美团
