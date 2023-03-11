@@ -28,8 +28,10 @@
 吾爱获取 = type=http-request,pattern=https:\/\/www\.52pojie\.cn\/home\.php\?,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/52pojie-DailyBonus/52pojie.js
 # > 阿里云盘 app获取
 阿里云盘 = requires-body=1,type=http-response,pattern=https:\/\/auth.aliyundrive.com\/v2\/account\/token,script-path=https://raw.githubusercontent.com/lowking/Scripts/master/ali/aliYunPanCheckIn.js
+# > Bing积分 登录 https://rewards.bing.com 获取 Cookie
+Bing积分 = requires-body=0,type=http-request,pattern=https:\/\/rewards\.bing\.com,script-path= https://raw.githubusercontent.com/lowking/Scripts/master/bing/bingPoint.js
 
 # 分割线——————————————————————————
 
 [MITM]
-hostname = %APPEND% api.m.jd.com, ms.jr.jd.com, me-api.jd.com, i.meituan.com, m.weibo.cn, user-api.smzdm.com, club.yili.com, app.bilibili.com, m.bilibili.com, miniappcsfw.122.gov.cn:8443, miniappcsfw.122.gov.cn, www.52pojie.cn, mobile.ximalaya.com, auth.aliyundrive.com
+hostname = %APPEND% api.m.jd.com, ms.jr.jd.com, me-api.jd.com, i.meituan.com, m.weibo.cn, user-api.smzdm.com, club.yili.com, app.bilibili.com, m.bilibili.com, miniappcsfw.122.gov.cn:8443, miniappcsfw.122.gov.cn, www.52pojie.cn, mobile.ximalaya.com, auth.aliyundrive.com, rewards.bing.com
