@@ -1,9 +1,0 @@
-#!name=京东联盟
-#!desc=
-
-[Script]
-京东联盟 = type=http-request,pattern=https:\/\/.+\.jd\.com\/graphext\/draw\?sku=(\d+).*,requires-body=0,max-size=0,script-path=https://raw.githubusercontent.com/id77/QuantumultX/master/Script/jdapp_to_union.js
-京东联盟 = type=http-request,pattern=https:\/\/.+\.jd\.com\/product\/.*\/(\d+)\.html,requires-body=0,max-size=0,script-path=https://raw.githubusercontent.com/id77/QuantumultX/master/Script/jdapp_to_union.js
-
-[MITM]
-hostname = %APPEND% , -ap-dd*.jd.com, -ddms.jd.com, -imio.jd.com, -jdcs.m.jd.com, -jdpaycert.jd.com, -jdpaysdk.jd.com, -jtk.jd.com, -lite-msg.m.jd.com, -msjdpay.jd.com, -payfinish.jd.com, -payfinish.m.jd.com, -poly-merchant.jd.com, -redpoint-msg.m.jd.com, *.*.jd.com, *.*.jingxi.com, *.*.jkcsjd.com, *.jd.com, *.jingxi.com, *.jkcsjd.com
