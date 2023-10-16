@@ -1,38 +1,28 @@
 #!name=定时脚本
-#!desc=最后更新时间 2023-03-11
+#!desc=最后更新时间 2023-10-16
 #!system=ios
 
 # 分割线——————————————————————————
 
 [Script]
-# > Bing 领取积分🎉（积分可兑换京东E卡或抽奖）
-Bing积分 = type=cron,cronexp="0 10 0 * * ?",wake-system=1,script-path= https://raw.githubusercontent.com/lowking/Scripts/master/bing/bingPoint.js
-# > 喜马拉雅
-喜马拉雅 = type=cron,cronexp=30 0 0 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/ClydeTime/Quantumult/main/Script/Task/xmlySign.js,script-update-interval=0,timeout=30
+# > 京东资产变动
+京东资产 = type=cron,cronexp=15 9,17 * * *,wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/Tartarus2014/Script/master/jd_bean_change.js,script-update-interval=0
 # > 美团
-美团签到 = type=cron,cronexp=0 1 0 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/meituan/meituan.js,script-update-interval=0
-# > 什么值得买
-值买签到 = type=cron,cronexp=30 2 0 * * *,wake-system=1,timeout=60,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/smzdm/smzdm_daily.js,script-update-interval=0
+美团签到 = type=cron,cronexp=0 0 0 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/meituan/meituan.js,script-update-interval=0
 # > 哔哩哔哩
-//哔哩哔哩 = type=cron,cronexp=30 3 0 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/ClydeTime/Quantumult/main/Script/Task/BiliBili.js,timeout=60
-# > 伊利乳品 
-//伊利乳品 = type=cron,cronexp=30 4 0 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/id77/QuantumultX/master/task/yiLi.js
-# > 吾爱破解
-//吾爱签到 = type=cron,cronexp=30 5 0 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/52pojie-DailyBonus/52pojie.js
-# > 阿里云盘 签到
-阿里云盘 = type=cron,cronexp=30 6 0 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/lowking/Scripts/master/ali/aliYunPanCheckIn.js,script-update-interval=0
-# > 微博推送
-//微博推送= type=cron,cronexp="0 0 9-21 * * *",wake-system=1,script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/Weibo/Weibo.js,script-update-interval=0
-# > 每日一句
-每日一句 = type=cron,cronexp=8 8 8 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/githubdulong/Script/master/One.js,script-update-interval=0
-# > 京东物流
-京东物流 = type=cron,cronexp=30 0 12 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/id77/QuantumultX/master/task/jdWuLiu.js,script-update-interval=0
-# > 彩票开奖
-//彩票查询 = type=cron,cronexp="0 0 22 * * 2,4,7",script-path=https://raw.githubusercontent.com/evilbutcher/QuantumultX/master/check_in/ssq/ssq.js,script-update-interval=0
+哔哩哔哩 = type=cron,cronexp=30 0 0 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/ClydeTime/BiliBili/main/js/BiliBiliDailyBonus.js,timeout=60
+# > 阿里云盘
+阿里云盘 = type=cron,cronexp=0 1 0 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/lowking/Scripts/master/ali/aliYunPanCheckIn.js,script-update-interval=0
+# > 顺丰速运
+顺丰速运 = type=cron,cronexp=30 1 0 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/sfexpress/sfexpress.js,script-update-interval=0,timeout=30
+# > 建行生活
+建行生活 = type=cron,cronexp=0 2 0 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/githubdulong/Script/master/jhsh_checkIn.js,script-update-interval=0,timeout=30
 # > Gist备份+恢复
-数据备份 = type=cron,cronexp=50 23 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/dompling/Script/master/gist/backup.js,script-update-interval=0,timeout=60
-//数据恢复 = type=cron,cronexp=55 23 * 1 *,wake-system=1,script-path=https://raw.githubusercontent.com/dompling/Script/master/gist/restore.js,script-update-interval=0,timeout=60
-# > 同步检测
-帐户检测 = type=cron,cronexp="0 36 5,11,17,23 * * *",wake-system=1,script-path=https://raw.githubusercontent.com/lowking/Scripts/master/jd/jd_cookie_search.js,script-update-interval=0,timeout=60
-# > SUB 订阅同步
-订阅同步 = type=cron,cronexp="15 0 20 * * *",script-path=https://github.com/sub-store-org/Sub-Store/releases/latest/download/cron-sync-artifacts.min.js,script-update-interval=0,wake-system=1,timeout=60
+数据备份 = type=cron,cronexp=0 50 23 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/dompling/Script/master/gist/backup.js,script-update-interval=0,timeout=60
+//数据恢复 = type=cron,cronexp=0 55 23 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/dompling/Script/master/gist/restore.js,script-update-interval=0,timeout=60
+# > SUB订阅同步
+订阅同步 = type=cron,cronexp=30 50 23 * * *,script-path=https://github.com/sub-store-org/Sub-Store/releases/latest/download/cron-sync-artifacts.min.js,script-update-interval=0,wake-system=1,timeout=60
+# > i茅台
+i 茅台 = type=cron,cronexp=17 9 * * *,timeout=60,script-path=https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/i-maotai.js,script-update-interval=0
+# > 新浪微博
+新浪微博 = type=cron,cronexp=15 8 * * *,timeout=60,script-path=https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/weibo_sign.js,script-update-interval=0
