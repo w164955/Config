@@ -1,5 +1,5 @@
 #!name=定时脚本
-#!desc=最后更新时间 2023-03-11
+#!desc=最后更新时间 2023-10-16
 #!system=ios
 
 # 分割线——————————————————————————
@@ -24,3 +24,5 @@
 订阅同步 = type=cron,cronexp=30 50 23 * * *,script-path=https://github.com/sub-store-org/Sub-Store/releases/latest/download/cron-sync-artifacts.min.js,script-update-interval=0,wake-system=1,timeout=60
 # > i茅台
 i 茅台 = type=cron,cronexp=17 9 * * *,timeout=60,script-path=https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/i-maotai.js,script-update-interval=0
+# > 新浪微博
+新浪微博 = type=cron,cronexp=15 8 * * *,timeout=60,script-path=https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/weibo_sign.js,script-update-interval=0
