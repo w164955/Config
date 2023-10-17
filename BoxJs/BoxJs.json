@@ -65,6 +65,19 @@
           "val": null,
           "type": "text",
           "desc": "APP_ID"
+        },
+        {
+          "id": "BaiDu_SECURITY_KEY",
+          "name": "百度 SECURITY_KEY",
+          "val": null,
+          "type": "text",
+          "desc": "SECURITY_KEY"
+        }
+      ],
+      "icons": [
+        "https://open.spotifycdn.com/cdn/images/favicon.0f31d2ea.ico",
+        "https://open.spotifycdn.com/cdn/images/favicon.0f31d2ea.ico"
+      ]
     },
     {
       "id": "weibo",
