@@ -421,6 +421,402 @@
       ]
     },
     {
+      "id": "blackmatrix7.zheye",
+      "name": "哲也同学",
+      "keys": [
+        "zhihu_blocked_users",
+        "zhihu_current_userinfo",
+        "zhihu_keyword_block",
+        "zhihu_black_answers",
+        "zheye_server_url"
+      ],
+      "author": "@blackmatrix7",
+      "repo": "https://github.com/blackmatrix7/ios_rule_script/tree/master/script/zheye",
+      "icons": [
+        "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/zheye/zheye.png",
+        "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/zheye/zheye.png"
+      ],
+      "descs_html": [
+        "<h4 align=\"left\">配置说明查看<a href=\"https://github.com/blackmatrix7/ios_rule_script/tree/master/script/zheye#readme\">README.md</a></h4>"
+      ],
+      "scripts": [
+      ],
+      "settings": [
+        {
+          "id": "zhihu_settings_fake_vip",
+          "name": "显示为盐选会员",
+          "val": false,
+          "type": "boolean",
+          "desc": "非会员用户显示为盐选会员"
+        },
+        {
+          "id": "zhihu_settings_blocked_keywords",
+          "name": "推荐页关键词过滤",
+          "val": true,
+          "type": "boolean",
+          "desc": "除普通关键词外还支持正则表达式过滤，需要开启“显示为盐选会员”"
+        },
+        {
+          "id": "zhihu_settings_recommend_stream",
+          "name": "屏蔽推荐页流媒体",
+          "val": false,
+          "type": "boolean",
+          "desc": "屏蔽推荐页中的视频、直播等流媒体信息"
+        },
+        {
+          "id": "zhihu_settings_recommend_pin",
+          "name": "屏蔽推荐页想法",
+          "val": false,
+          "type": "boolean",
+          "desc": "屏蔽推荐页中的想法"
+        },
+        {
+          "id": "zhihu_settings_blocked_users",
+          "name": "黑名单屏蔽效果增强",
+          "val": true,
+          "type": "boolean",
+          "desc": "增强知乎APP黑名单用户屏蔽效果"
+        },
+        {
+          "id": "zhihu_settings_moments_stream",
+          "name": "屏蔽关注页流媒体",
+          "val": false,
+          "type": "boolean",
+          "desc": "屏蔽关注页中的视频等流媒体"
+        },
+        {
+          "id": "zhihu_settings_moments_recommend",
+          "name": "屏蔽关注页推荐关注人",
+          "val": false,
+          "type": "boolean",
+          "desc": "屏蔽关注页中的“为您推荐”"
+        },
+        {
+          "id": "zhihu_settings_moments_activity",
+          "name": "屏蔽关注页活动更新",
+          "val": false,
+          "type": "boolean",
+          "desc": "屏蔽关注页中的“关注的内容”"
+        },
+        {
+          "id": "zhihu_settings_hot_list",
+          "name": "热榜去广告",
+          "val": true,
+          "type": "boolean",
+          "desc": "去除知乎热榜页面的广告"
+        },
+        {
+          "id": "zhihu_settings_preset_words",
+          "name": "屏蔽预置关键词广告",
+          "val": false,
+          "type": "boolean",
+          "desc": "屏蔽搜索页中的预置关键词广告"
+        },
+        {
+          "id": "zhihu_settings_remove_article",
+          "name": "屏蔽推荐页中的文章",
+          "val": false,
+          "type": "boolean",
+          "desc": "屏蔽推荐页中的文章，默认不启用"
+        },
+        {
+          "id": "zhihu_settings_sys_msg",
+          "name": "屏蔽官方账号推广消息",
+          "val": false,
+          "type": "boolean",
+          "desc": "屏蔽消息页内的官方账号推广消息"
+        },
+        {
+          "id": "zhihu_settings_answer_tip",
+          "name": "付费内容/营销推广/购物推广提醒",
+          "val": true,
+          "type": "boolean",
+          "desc": "在知乎回答中提示付费或营销内容"
+        },
+        {
+          "id": "zhihu_settings_check_paid_content",
+          "name": "推荐页中提示付费/营销/购物推广",
+          "val": false,
+          "type": "boolean",
+          "desc": "需要额外消耗流量，可能会影响推荐页加载速度"
+        },
+        {
+          "id": "zhihu_settings_request_content",
+          "name": "推荐页主动探测内容的方式",
+          "val": "local",
+          "type": "radios",
+          "items": [
+            {
+              "key": "local",
+              "label": "本地"
+            },
+            {
+              "key": "cloud",
+              "label": "云端"
+            }
+          ],
+          "desc": "开启推荐页中推广内容提示时，需要配置主动探测方式。默认为本地，使用云端需要在下方配置中填写服务端地址。"
+        },
+        {
+          "id": "zhihu_credit_score",
+          "name": "自定义用户盐值",
+          "val": "0",
+          "type": "input",
+          "desc": "修改用户盐值显示，无实际意义，不建议使用。仅当修改的盐值大于真实盐值时生效，关闭此功能请将盐值设置为0。"
+        },
+        {
+          "id": "zhihu_black_answers",
+          "name": "知乎黑名单用户回答Id",
+          "val": "",
+          "type": "input",
+          "desc": "记录知乎黑名单用户的回答Id的临时变量，通常不会有太多数据。如果数据量过大请清空此内容。"
+        },
+        {
+          "id": "zhihu_keyword_block",
+          "name": "知乎屏蔽关键词",
+          "val": "",
+          "type": "textarea",
+          "desc": "必须是JSON格式，Key为用户Id，不要修改。格式不正确可能导致执行异常。"
+        },
+        {
+          "id": "zheye_server_url",
+          "name": "哲也同学服务端",
+          "val": "",
+          "type": "input",
+          "desc": "用于解锁更多功能。示例 http://192.168.1.200:52273 。"
+        }
+      ]
+    },
+    {
+      "id": "blackmatrix7.smzdm",
+      "name": "什么值得买",
+      "keys": [
+        "smzdm_cookie",
+        "smzdm_cookie_id",
+        "smzdm_signin",
+        "smzdm_mission",
+        "smzdm_lottery",
+        "smzdm_blackroom",
+        "smzdm_sync_qinglong"
+      ],
+      "author": "@blackmatrix7",
+      "repo": "https://github.com/blackmatrix7/ios_rule_script/tree/master/script/smzdm",
+      "icons": [
+        "https://raw.githubusercontent.com/Orz-3/mini/master/Alpha/smzdm.png",
+        "https://raw.githubusercontent.com/Orz-3/mini/master/Color/smzdm.png"
+      ],
+      "scripts": [
+        {
+          "name": "执行每日签到与任务",
+          "script": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/smzdm/smzdm_daily.js"
+        }
+      ],
+      "settings": [
+        {
+          "id": "smzdm_sync_qinglong",
+          "name": "同步数据到青龙面板",
+          "val": false,
+          "type": "boolean",
+          "desc": "将必要数据同步至青龙面板，以执行作业"
+        },
+        {
+          "id": "smzdm_signin",
+          "name": "执行每日签到",
+          "val": false,
+          "type": "boolean",
+          "desc": ""
+        },
+        {
+          "id": "smzdm_mission",
+          "name": "执行每日任务",
+          "val": false,
+          "type": "boolean",
+          "desc": ""
+        },
+        {
+          "id": "smzdm_lottery",
+          "name": "执行每日抽奖",
+          "val": false,
+          "type": "boolean",
+          "desc": ""
+        },
+        {
+          "id": "smzdm_blackroom",
+          "name": "脚本运行时进行黑号检测",
+          "val": false,
+          "type": "boolean",
+          "desc": ""
+        }
+      ]
+    },
+        {
+      "id": "blackmatrix7.applestore",
+      "name": "AppleStore",
+      "keys": [
+        "applestore_goods_model",
+        "applestore_region",
+        "applestore_goods_stock",
+        "applestore_settings_notify_soldout"
+      ],
+      "author": "@blackmatrix7",
+      "repo": "https://github.com/blackmatrix7/ios_rule_script/tree/master/script/applestore",
+      "settings": [
+        {
+          "id": "applestore_goods_model",
+          "name": "商品型号",
+          "val": "",
+          "type": "textarea",
+          "placeholder": "Z0YQ#MKMR3CH/A,MJXA3FE/A#AppleWatch 7 石墨色不锈钢;MLDE3CH/A",
+          "autoGrow": true,
+          "desc": "需要监控的商品型号，option用#分隔，自定义名称在option后以#分隔。多款以;分隔，移动端建议只监控一个。"
+        },
+        {
+          "id": "applestore_region",
+          "name": "监控地区",
+          "val": "",
+          "type": "input",
+          "placeholder": "吉林 长春 朝阳区",
+          "autoGrow": true,
+          "desc": "直辖市示例：北京 北京 昌平区"
+        },
+        {
+          "id": "applestore_settings_notify_soldout",
+          "name": "查询无货也进行通知",
+          "val": false,
+          "type": "boolean",
+          "desc": "可能会发起大量推送，建议仅在测试时开启"
+        }
+      ],
+      "icons": [
+        "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/applestore/icon/applestore_dark.png",
+        "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/applestore/icon/applestore.png"
+      ]
+    },
+    {
+      "id": "blackmatrix7.testflight",
+      "name": "TestFlight",
+      "keys": [
+        "tf_app_id",
+        "tf_join_mode",
+        "tf_loop_count",
+        "tf_session_info",
+        "tf_joined_app_id",
+        "tf_storefront_id",
+        "tf_invalid_app_id",
+        "tf_check_account_id",
+        "tf_join_concurrency",
+        "tf_app_use_account_id",
+        "tf_check_session_time",
+        "tf_check_session_time_diff"
+      ],
+      "author": "@blackmatrix7",
+      "repo": "https://github.com/blackmatrix7/ios_rule_script/tree/master/script/testflight",
+      "settings": [
+        {
+          "id": "tf_sync_qinglong",
+          "name": "同步数据到青龙面板",
+          "val": false,
+          "type": "boolean",
+          "desc": "将必要数据同步至青龙面板，以执行作业"
+        },
+        {
+          "id": "tf_join_mode",
+          "name": "执行模式",
+          "val": "1",
+          "type": "radios",
+          "items": [
+            {
+              "key": "0",
+              "label": "温和"
+            },
+            {
+              "key": "1",
+              "label": "标准"
+            },
+            {
+              "key": "2",
+              "label": "暴力"
+            }
+          ],
+          "desc": "推荐使用温和与标准模式，暴力模式风险极高"
+        },
+        {
+          "id": "tf_app_id",
+          "name": "TestFlight App愿望清单",
+          "val": "",
+          "type": "input",
+          "placeholder": "",
+          "autoGrow": true,
+          "desc": "等待加入的TestFlight APP Id，多个APP Id以;分隔"
+        },
+        {
+          "id": "tf_join_concurrency",
+          "name": "并发数量",
+          "val": 2,
+          "type": "number",
+          "placeholder": "",
+          "autoGrow": true,
+          "desc": "当App的Beta可加入时，每个账户并发多少个请求尝试加入"
+        },
+        {
+          "id": "tf_loop_count",
+          "name": "每次运行循环次数",
+          "val": 1,
+          "type": "number",
+          "placeholder": "",
+          "autoGrow": true,
+          "desc": "每次运行脚本时循环多少次，每次循环间隔800毫秒。NodeJS(非青龙面板)可设置为0，表示持续运行"
+        },
+        {
+          "id": "tf_check_session_time_diff",
+          "name": "检查Session有效性的间隔",
+          "val": 7200,
+          "type": "number",
+          "placeholder": "",
+          "autoGrow": true,
+          "desc": "每间隔多少秒检查一次账户的有效性，默认7200秒"
+        },
+        {
+          "id": "tf_joined_app_id",
+          "name": "TestFlight每个账户已加入成功的AppId",
+          "val": "",
+          "type": "textarea",
+          "placeholder": "",
+          "autoGrow": true,
+          "desc": "多账户的TestFlight已加入的AppId，不建议手动修改"
+        },
+        {
+          "id": "tf_session_info",
+          "name": "TestFlight Session数据",
+          "val": "",
+          "type": "textarea",
+          "placeholder": "",
+          "autoGrow": true,
+          "desc": "多账户的TestFlight数据，仅供查看，请勿手动修改以免引发异常"
+        },
+        {
+          "id": "tf_check_account_id",
+          "name": "用于检查App Beta可否加入的AccountId",
+          "val": "",
+          "type": "input",
+          "placeholder": "",
+          "autoGrow": true,
+          "desc": "选择一个账号专门用于检测TF是否可以加入，以保护主号"
+        },
+        {
+          "id": "tf_storefront_id",
+          "name": "自定义storefrontId",
+          "val": "143441-19,29",
+          "type": "input",
+          "desc": "自定义storefrontId，以解决国区账号TestFlight下载App受限问题"
+        }
+      ],
+      "icons": [
+        "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/testflight/icon/testflight.png",
+        "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/testflight/icon/testflight.png"
+      ]
+    },
+    {
       "id": "Hisense",
       "name": "海信爱家",
       "author": "@FoKit",
