@@ -24,3 +24,5 @@
 i 茅台 = type=cron,cronexp=17 9 * * *,timeout=60,script-path=https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/i-maotai.js,script-update-interval=0
 # > 新浪微博
 新浪微博 = type=cron,cronexp=15 8 * * *,timeout=60,script-path=https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/weibo_sign.js,script-update-interval=0
+# > 海信爱家
+海信爱家 = type=cron,cronexp=52 7 * * *,timeout=500,script-path=https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/Hisense.js,script-update-interval=0
