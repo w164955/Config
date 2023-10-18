@@ -1,5 +1,5 @@
 #!name=海信爱家
-#!desc=海信爱家
+#!desc=海信爱家（公众号） -> 个人中心 -> 会员中心 -> 玩转积分 -> 签到
 
 [Script]
 海信数据 = type=http-request,pattern=^https:\/\/sweixin\.hisense\.com\/ecrp\/member\/initMember,requires-body=0,max-size=0,script-path=https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/Hisense.js
