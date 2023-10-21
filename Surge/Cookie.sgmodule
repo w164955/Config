@@ -3,8 +3,6 @@
 #!system=ios
 
 [Script]
-# > 京东Cookie 登陆 https://bean.m.jd.com/bean/signIndex.action
-京东 Cookie = type=http-request,requires-body=1,pattern=^https:\/\/(api\.m|me-api|ms\.jr)\.jd\.com\/(client\.action\?functionId=signBean|user_new\/info\/GetJDUserInfoUnion\?|gw\/generic\/hy\/h5\/m\/appSign\?),script-path=https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js
 # > 美团 app签到获取
 美团获取 = script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/meituan/meituan.cookie.js,requires-body=true,type=http-request,pattern=^https:\/\/i.meituan.com\/evolve\/signin\/signpost\/
 # > 阿里云盘 app获取
@@ -19,4 +17,4 @@
 海信数据 = type=http-request,pattern=^https:\/\/sweixin\.hisense\.com\/ecrp\/member\/initMember,requires-body=0,max-size=0,script-path=https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/Hisense.js
 海信签到 = type=http-request,pattern=^https:\/\/cps\.hisense\.com\/customerAth\/activity-manage\/activityUser\/participate,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/Hisense.js
 [MITM]
-hostname = %APPEND% ms.jr.jd.com, me-api.jd.com, api.m.jd.com, i.meituan.com, 180.153.255.*, 180.153.255.10*, 180.153.250.*, 114.80.99.*, 1.62.62.64, auth.alipan.com, ccsp-egmas.sf-express.com, yunbusiness.ccb.com, api.weibo.cn, sweixin.hisense.com, cps.hisense.com
+hostname = %APPEND% i.meituan.com, 180.153.255.*, 180.153.255.10*, 180.153.250.*, 114.80.99.*, 1.62.62.64, auth.alipan.com, ccsp-egmas.sf-express.com, yunbusiness.ccb.com, api.weibo.cn, sweixin.hisense.com, cps.hisense.com
