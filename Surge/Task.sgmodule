@@ -8,7 +8,7 @@
 # > 美团
 美团签到 = type=cron,cronexp=0 0 0 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/meituan/meituan.js,script-update-interval=0
 # > 阿里云盘
-//阿里云盘 = type=cron,cronexp=30 0 0 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/lowking/Scripts/master/ali/aliYunPanCheckIn.js,script-update-interval=0
+阿里云盘 = type=cron,cronexp=30 0 0 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/lowking/Scripts/master/ali/aliYunPanCheckIn.js,script-update-interval=0
 # > 顺丰速运
 顺丰速运 = type=cron,cronexp=30 1 0 * * *,wake-system=1,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/sfexpress/sfexpress.js,script-update-interval=0,timeout=30
 # > 建行生活
