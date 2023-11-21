@@ -75,6 +75,13 @@ IP-CIDR,47.110.187.87/32,REJECT
 IP-CIDR,47.96.15.52/32,REJECT
 IP-CIDR,116.62.220.39/32,REJECT
 DOMAIN,ssp.soulapp.cn,REJECT
+# 酷安
+DOMAIN-KEYWORD,.pangolin-sdk-toutiao,REJECT-NO-DROP
+DOMAIN-SUFFIX,ulogs.umengcloud.com,REJECT-NO-DROP
+DOMAIN-SUFFIX,toblog.ctobsnssdk.com,REJECT-NO-DROP
+DOMAIN-SUFFIX,adashbc.ut.taobao.com,REJECT-NO-DROP
+DOMAIN-SUFFIX,adashxgc.ut.taobao.com,REJECT-NO-DROP
+DOMAIN-SUFFIX,gromore.pangolin-sdk-toutiao.com,REJECT-NO-DROP
 
 [URL Rewrite]
 # > 招行掌上生活 (需卸载重装)
@@ -82,6 +89,16 @@ DOMAIN,ssp.soulapp.cn,REJECT
 ^https?:\/\/az1mbasecc\.bas\.cmbchina\.com\/Edge\/api\/mlife\.clientface\.clientservice\.api\.advertiseService\/preCacheAdvertiseSec - reject
 # 设置栏目内广告 intellicc.bas.cmbchina.com header
 ^https?:\/\/intellicc\.bas\.cmbchina\.com\/Edge\/api\/mlife\.intelli\.render\.api\.render\/getDynamicDataSec - reject
+# 爱思开屏
+^https?:\/\/list-app-m\.i4\.cn\/getopfstadinfo\.xhtml - reject
+
+[Map Local]
+# 中国移动开屏 client.app.coc.10086.cn
+^https?:\/\/client\.app\.coc\.10086\.cn\/biz-orange\/DN\/(explorePage\/getAdverList|init\/startInit) data="https://raw.githubusercontent.com/Keywos/rule/main/mocks//reject-200.txt"
+# 招商银行开屏 webappcfg.paas.cmbchina.com
+^https?:\/\/webappcfg\.paas\.cmbchina\.com\/v\d\/func\/getmarketconfig data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
+# 米家
+^https?:\/\/home\.mi\.com\/cgi-op\/api\/v1\/recommendation\/(banner|carousel\/banners|myTab|openingBanner) data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
 
 [Script]
 # > 京东App 历史价格 
@@ -93,6 +110,8 @@ Nicegram = type=http-response,pattern=^https?:\/\/restore-access\.indream\.app\/
 # > 奈飞评分
 奈飞评分 = type=http-request,pattern=^https?:\/\/ios(-.*)?\.prod\.ftl\.netflix\.com\/iosui\/user/.+path=%5B%22videos%22%2C%\d+%22%2C%22summary%22%5D,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/nf_rating.js
 奈飞评分 = type=http-response,requires-body=1,pattern=^https?:\/\/ios(-.*)?\.prod\.ftl\.netflix\.com\/iosui\/user/.+path=%5B%22videos%22%2C%\d+%22%2C%22summary%22%5D,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/nf_rating.js
+# 爱思推广全部干掉只保留搜索 list-app-m.i4.cn, search-app-m.i4.cn
+爱思 = type=http-response,pattern=^https?:\/\/(search|list)-app-m\.i4\.cn\/(getHotSearchList|getAppList)\.xhtml,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Keywos/rule/main/JS/aisi.js
 
 
 # > 模块订阅(按需单独添加)
@@ -124,4 +143,5 @@ Nicegram = type=http-response,pattern=^https?:\/\/restore-access\.indream\.app\/
 # 分割线——————————————————————————
 
 [MITM]
-hostname = %APPEND% api.m.jd.com, m.douban.com, ios-*.prod.ftl.netflix.com, ios.prod.ftl.netflix.com, www.bing.com, biz.cyapi.cn, app.bilibili.com
+h2 = true
+hostname = %APPEND% api.m.jd.com, m.douban.com, ios-*.prod.ftl.netflix.com, ios.prod.ftl.netflix.com, www.bing.com, biz.cyapi.cn, app.bilibili.com, client.app.coc.10086.cn, list-app-m.i4.cn, search-app-m.i4.cn, mp.weixin.qq.com, webappcfg.paas.cmbchina.com, ,home.mi.com
