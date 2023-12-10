@@ -106,7 +106,7 @@ DOMAIN-SUFFIX,gromore.pangolin-sdk-toutiao.com,REJECT-NO-DROP
 # > 豆瓣电影 搜索 
 豆瓣电影 = type=http-response,pattern=^https://m.douban.com/movie/subject/.+,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/githubdulong/Script/master/Douban.js
 # > Nicegram 解锁
-Nicegram = type=http-response,pattern=^https?:\/\/restore-access\.indream\.app\/restoreAccess,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Godrock354/Script/main/JavaScript/Surge/Nicegram.js,script-update-interval=0
+Nicegram = type=http-response, pattern=https://nicegram.cloud/api/v6/user/info, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/Nicegram.js, timeout=60, script-update-interval=0
 # > 奈飞评分
 奈飞评分 = type=http-request,pattern=^https?:\/\/ios(-.*)?\.prod\.ftl\.netflix\.com\/iosui\/user/.+path=%5B%22videos%22%2C%\d+%22%2C%22summary%22%5D,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/nf_rating.js
 奈飞评分 = type=http-response,requires-body=1,pattern=^https?:\/\/ios(-.*)?\.prod\.ftl\.netflix\.com\/iosui\/user/.+path=%5B%22videos%22%2C%\d+%22%2C%22summary%22%5D,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/nf_rating.js
@@ -144,4 +144,4 @@ Nicegram = type=http-response,pattern=^https?:\/\/restore-access\.indream\.app\/
 
 [MITM]
 h2 = true
-hostname = %APPEND% api.m.jd.com, m.douban.com, ios-*.prod.ftl.netflix.com, ios.prod.ftl.netflix.com, www.bing.com, biz.cyapi.cn, app.bilibili.com, client.app.coc.10086.cn, list-app-m.i4.cn, search-app-m.i4.cn, mp.weixin.qq.com, webappcfg.paas.cmbchina.com, ,home.mi.com
+hostname = %APPEND% api.m.jd.com, m.douban.com, ios-*.prod.ftl.netflix.com, ios.prod.ftl.netflix.com, www.bing.com, biz.cyapi.cn, app.bilibili.com, client.app.coc.10086.cn, list-app-m.i4.cn, search-app-m.i4.cn, mp.weixin.qq.com, webappcfg.paas.cmbchina.com, home.mi.com, nicegram.cloud
